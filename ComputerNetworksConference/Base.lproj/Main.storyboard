@@ -223,41 +223,44 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BRL-e0-in9">
                                 <rect key="frame" x="0.0" y="106" width="414" height="707"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgendaHeaderCell" id="KpU-v6-J3G" customClass="AgendaHeaderCell" customModule="ComputerNetworksConference" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KpU-v6-J3G" id="dng-lr-tH6">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-fy-gDr">
-                                                    <rect key="frame" x="25" y="11" width="364" height="24.5"/>
+                                                    <rect key="frame" x="25" y="14" width="364" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24.5" id="hab-6a-O4T"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="Pcr-fy-gDr" firstAttribute="leading" secondItem="dng-lr-tH6" secondAttribute="leading" constant="25" id="8GI-2J-0dF"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Pcr-fy-gDr" secondAttribute="bottom" id="edd-yi-unw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Pcr-fy-gDr" secondAttribute="bottom" constant="3" id="edd-yi-unw"/>
                                                 <constraint firstAttribute="trailing" secondItem="Pcr-fy-gDr" secondAttribute="trailing" constant="25" id="g13-9r-rhW"/>
-                                                <constraint firstItem="Pcr-fy-gDr" firstAttribute="top" secondItem="dng-lr-tH6" secondAttribute="topMargin" id="wOY-yg-KeI"/>
+                                                <constraint firstItem="Pcr-fy-gDr" firstAttribute="top" secondItem="dng-lr-tH6" secondAttribute="topMargin" constant="3" id="wOY-yg-KeI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="eventData" destination="Pcr-fy-gDr" id="uz9-aN-HUw"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgendaCell" rowHeight="75" id="mmN-79-tvd" customClass="AgendaCell">
-                                        <rect key="frame" x="0.0" y="74.5" width="414" height="75"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgendaCell" rowHeight="75" id="mmN-79-tvd" customClass="AgendaCell" customModule="ComputerNetworksConference" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="81" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mmN-79-tvd" id="YEN-kq-Xne">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KD1-2c-yZe" userLabel="Data">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KD1-2c-yZe">
                                                     <rect key="frame" x="25" y="11" width="51.5" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
@@ -279,7 +282,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="eventName" destination="KD1-2c-yZe" id="foE-1U-X7O"/>
+                                            <outlet property="eventName" destination="KD1-2c-yZe" id="ugK-r5-UaC"/>
                                             <outlet property="eventTime" destination="lZj-Q9-MMW" id="XS9-UN-HBP"/>
                                         </connections>
                                     </tableViewCell>
@@ -318,6 +321,6 @@
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="image1" width="266.66665649414062" height="133.33332824707031"/>
-        <image name="list.bullet" catalog="system" width="32" height="32"/>
+        <image name="list.bullet" catalog="system" width="64" height="44"/>
     </resources>
 </document>
