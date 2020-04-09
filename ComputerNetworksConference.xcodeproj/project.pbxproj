@@ -15,6 +15,8 @@
 		5B4961022423F2780037D3B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4961002423F2780037D3B9 /* LaunchScreen.storyboard */; };
 		5B49610D2423F2780037D3B9 /* ComputerNetworksConferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B49610C2423F2780037D3B9 /* ComputerNetworksConferenceTests.swift */; };
 		5B4961182423F2780037D3B9 /* ComputerNetworksConferenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4961172423F2780037D3B9 /* ComputerNetworksConferenceUITests.swift */; };
+		5B563539243F2E2F00915529 /* AgendaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B563538243F2E2F00915529 /* AgendaCell.swift */; };
+		5B56353B243F8AD900915529 /* AgendaHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56353A243F8AD900915529 /* AgendaHeaderCell.swift */; };
 		5BAA8CC1243CE36E004511E7 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA8CC0243CE36E004511E7 /* PhotoCell.swift */; };
 		5BC0E878243DC178004F792C /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0E877243DC178004F792C /* AgendaViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,8 @@
 		5B4961132423F2780037D3B9 /* ComputerNetworksConferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComputerNetworksConferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4961172423F2780037D3B9 /* ComputerNetworksConferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerNetworksConferenceUITests.swift; sourceTree = "<group>"; };
 		5B4961192423F2780037D3B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B563538243F2E2F00915529 /* AgendaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaCell.swift; sourceTree = "<group>"; };
+		5B56353A243F8AD900915529 /* AgendaHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaHeaderCell.swift; sourceTree = "<group>"; };
 		5BAA8CC0243CE36E004511E7 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		5BC0E877243DC178004F792C /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				5BC0E877243DC178004F792C /* AgendaViewController.swift */,
+				5B563538243F2E2F00915529 /* AgendaCell.swift */,
+				5B56353A243F8AD900915529 /* AgendaHeaderCell.swift */,
 			);
 			path = agenda;
 			sourceTree = "<group>";
@@ -290,8 +296,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BAA8CC1243CE36E004511E7 /* PhotoCell.swift in Sources */,
+				5B563539243F2E2F00915529 /* AgendaCell.swift in Sources */,
 				5B4960FA2423F2750037D3B9 /* MainViewController.swift in Sources */,
 				5BC0E878243DC178004F792C /* AgendaViewController.swift in Sources */,
+				5B56353B243F8AD900915529 /* AgendaHeaderCell.swift in Sources */,
 				5B4960F62423F2750037D3B9 /* AppDelegate.swift in Sources */,
 				5B4960F82423F2750037D3B9 /* SceneDelegate.swift in Sources */,
 			);

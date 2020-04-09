@@ -13,11 +13,7 @@ UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var mainTable: UITableView!
-    @IBOutlet weak var agendaButton: UIButton!
-    @IBOutlet weak var emergencyButton: UIButton!
-    @IBOutlet weak var galleryButton: UIButton!
-    @IBOutlet weak var buildingButton: UIButton!
-    
+   
     
     var tab = [[13, 17], [8,10,12]]
     
@@ -25,10 +21,7 @@ UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         mainTable.delegate = self
         mainTable.dataSource = self
-        roundButton(agendaButton)
-        roundButton(emergencyButton)
-        roundButton(galleryButton)
-        roundButton(buildingButton)
+       
     }
     
     func roundButton(_ button: UIButton) {
