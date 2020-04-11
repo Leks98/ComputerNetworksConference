@@ -20,7 +20,9 @@
 		5BAA8CC1243CE36E004511E7 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA8CC0243CE36E004511E7 /* PhotoCell.swift */; };
 		5BB00FA324409B79005AC185 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB00FA224409B79005AC185 /* Colors.xcassets */; };
 		5BC0E878243DC178004F792C /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0E877243DC178004F792C /* AgendaViewController.swift */; };
-		5BF2B2812441D57E006EAA6A /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2B2802441D57E006EAA6A /* SideMenuViewController.swift */; };
+		5BD6F49E24424CA4002055CA /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6F49D24424CA4002055CA /* SlideInTransition.swift */; };
+		5BD6F4A024425F17002055CA /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6F49F24425F17002055CA /* SideMenuViewController.swift */; };
+		5BF2B2812441D57E006EAA6A /* ButtonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2B2802441D57E006EAA6A /* ButtonTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +62,9 @@
 		5BAA8CC0243CE36E004511E7 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		5BB00FA224409B79005AC185 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5BC0E877243DC178004F792C /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
-		5BF2B2802441D57E006EAA6A /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		5BD6F49D24424CA4002055CA /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
+		5BD6F49F24425F17002055CA /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		5BF2B2802441D57E006EAA6A /* ButtonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +177,9 @@
 		5BF2B27F2441D535006EAA6A /* sideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				5BF2B2802441D57E006EAA6A /* SideMenuViewController.swift */,
+				5BF2B2802441D57E006EAA6A /* ButtonTableViewController.swift */,
+				5BD6F49D24424CA4002055CA /* SlideInTransition.swift */,
+				5BD6F49F24425F17002055CA /* SideMenuViewController.swift */,
 			);
 			path = sideMenu;
 			sourceTree = "<group>";
@@ -310,13 +316,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD6F49E24424CA4002055CA /* SlideInTransition.swift in Sources */,
 				5BAA8CC1243CE36E004511E7 /* PhotoCell.swift in Sources */,
 				5B563539243F2E2F00915529 /* AgendaCell.swift in Sources */,
 				5B4960FA2423F2750037D3B9 /* MainViewController.swift in Sources */,
-				5BF2B2812441D57E006EAA6A /* SideMenuViewController.swift in Sources */,
+				5BF2B2812441D57E006EAA6A /* ButtonTableViewController.swift in Sources */,
 				5BC0E878243DC178004F792C /* AgendaViewController.swift in Sources */,
 				5B56353B243F8AD900915529 /* AgendaHeaderCell.swift in Sources */,
 				5B4960F62423F2750037D3B9 /* AppDelegate.swift in Sources */,
+				5BD6F4A024425F17002055CA /* SideMenuViewController.swift in Sources */,
 				5B4960F82423F2750037D3B9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

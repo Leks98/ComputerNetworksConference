@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Side Menu View Controller-->
+        <!--Button Table View Controller-->
         <scene sceneID="x4Z-JG-tLK">
             <objects>
-                <tableViewController id="Fge-h9-QR9" customClass="SideMenuViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bEF-0m-tlF">
+                <tableViewController id="Fge-h9-QR9" customClass="ButtonTableViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bEF-0m-tlF">
                         <rect key="frame" x="0.0" y="0.0" width="324" height="714"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -218,10 +218,10 @@
             </objects>
             <point key="canvasLocation" x="-1939" y="664"/>
         </scene>
-        <!--View Controller-->
+        <!--Side Menu View Controller-->
         <scene sceneID="bLN-3j-IKX">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="gJk-HK-3jF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SideMenuViewController" modalPresentationStyle="overCurrentContext" id="gJk-HK-3jF" customClass="SideMenuViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tol-Cx-F25">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,7 +264,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YJD-I2-T9Q" firstAttribute="trailing" secondItem="RAc-Qf-ICl" secondAttribute="trailing" constant="90" id="5gA-nb-XPc"/>
                             <constraint firstItem="RAc-Qf-ICl" firstAttribute="leading" secondItem="YJD-I2-T9Q" secondAttribute="leading" id="NQj-Em-MJI"/>
@@ -273,6 +273,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YJD-I2-T9Q"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ttV-2N-wsM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="583-6L-dX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -307,7 +308,7 @@
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" image="list.bullet" catalog="system"/>
                                         <connections>
-                                            <segue destination="gJk-HK-3jF" kind="presentation" modalPresentationStyle="fullScreen" id="f70-K8-eia"/>
+                                            <action selector="SideMenuButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PWs-UZ-nH6"/>
                                         </connections>
                                     </button>
                                 </subviews>

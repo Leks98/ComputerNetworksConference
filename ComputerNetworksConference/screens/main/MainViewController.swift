@@ -13,7 +13,7 @@ UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var mainTable: UITableView!
-   
+    let transition = SlideInTransition()
     
     var tab = [[13, 17], [8,10,12]]
     
@@ -47,7 +47,22 @@ UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     @IBAction func SideMenuButtonPressed(_ sender: UIButton) {
+        guard let sideMenuViewController = storyboard?.instantiateViewController(identifier: "SideMenuViewController") else {return}
+        sideMenuViewController.modalPresentationStyle = .overCurrentContext
+        sideMenuViewController.transitioningDelegate = self
+        present(sideMenuViewController, animated: true)
     }
     
 }
 
+extension MainViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = false
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = false
+        return transition
+    }
+}

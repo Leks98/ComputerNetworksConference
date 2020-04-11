@@ -56,6 +56,7 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     @IBAction func sideMenuButttonPressed(_ sender: Any) {
+        
     }
     @IBAction func generalizedAgendaPressed(_ sender: Any) {
     }
