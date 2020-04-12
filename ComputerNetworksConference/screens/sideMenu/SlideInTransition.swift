@@ -13,7 +13,7 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
     var isPresenting = false
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 3.0
+        return 1.0
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -21,9 +21,10 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         let fromViewController = transitionContext.viewController(forKey: .from) else { return }
         let containerView = transitionContext.containerView
         
-        let finalWidth = toViewController.view.bounds.width * 0.8
+        let finalWidth = toViewController.view.bounds.width
         let finalHeight = toViewController.view.bounds.height
-        if isPresenting { containerView.addSubview(toViewController.view)
+        if isPresenting {
+            containerView.addSubview(toViewController.view)
             toViewController.view.frame = CGRect(x: -finalWidth, y: 0, width: finalWidth, height: finalHeight)
         }
         let transform = {
@@ -40,6 +41,4 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
             transitionContext.completeTransition(!isCancelled)
         }
     }
-    
-   
 }
