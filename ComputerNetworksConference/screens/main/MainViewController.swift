@@ -11,6 +11,8 @@ import UIKit
 class MainViewController:
 UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var mainTable: UITableView!
     let transition = SlideInTransition()
@@ -21,7 +23,7 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         super.viewDidLoad()
         mainTable.delegate = self
         mainTable.dataSource = self
-      
+        scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: textLabel.bottomAnchor).isActive=true
     }
     
     func roundButton(_ button: UIButton) {
