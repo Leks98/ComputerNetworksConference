@@ -263,17 +263,30 @@
                                     <constraint firstItem="L1k-C2-ufb" firstAttribute="top" secondItem="RAc-Qf-ICl" secondAttribute="top" id="ywS-hU-D6p"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzU-bk-VLR" userLabel="BackgroundView">
+                                <rect key="frame" x="324" y="0.0" width="90" height="896"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="EzU-bk-VLR" firstAttribute="top" secondItem="tol-Cx-F25" secondAttribute="top" id="4X3-Is-VDo"/>
                             <constraint firstItem="YJD-I2-T9Q" firstAttribute="trailing" secondItem="RAc-Qf-ICl" secondAttribute="trailing" constant="90" id="5gA-nb-XPc"/>
+                            <constraint firstItem="EzU-bk-VLR" firstAttribute="leading" secondItem="RAc-Qf-ICl" secondAttribute="trailing" id="AZx-k2-hT3"/>
                             <constraint firstItem="RAc-Qf-ICl" firstAttribute="leading" secondItem="YJD-I2-T9Q" secondAttribute="leading" id="NQj-Em-MJI"/>
+                            <constraint firstAttribute="trailing" secondItem="EzU-bk-VLR" secondAttribute="trailing" id="NfS-gu-oQP"/>
                             <constraint firstAttribute="bottom" secondItem="RAc-Qf-ICl" secondAttribute="bottom" id="af4-tZ-iQl"/>
+                            <constraint firstAttribute="bottom" secondItem="EzU-bk-VLR" secondAttribute="bottom" id="vup-HB-jSY"/>
                             <constraint firstItem="RAc-Qf-ICl" firstAttribute="top" secondItem="tol-Cx-F25" secondAttribute="top" id="zIs-D6-DvL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YJD-I2-T9Q"/>
                     </view>
                     <navigationItem key="navigationItem" id="ttV-2N-wsM"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="EzU-bk-VLR" id="YAe-QF-A2U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="583-6L-dX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -506,7 +519,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-fy-gDr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-fy-gDr">
                                                     <rect key="frame" x="25" y="14" width="364" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24.5" id="hab-6a-O4T"/>
