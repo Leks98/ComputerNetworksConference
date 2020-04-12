@@ -9,7 +9,7 @@
 import UIKit
 
 class MainViewController:
-UIViewController, UITableViewDelegate, UITableViewDataSource {
+UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var mainTable: UITableView!
@@ -53,11 +53,8 @@ UIViewController, UITableViewDelegate, UITableViewDataSource {
         present(sideMenuViewController, animated: true)
     }
     
-}
-
-extension MainViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = false
+        transition.isPresenting = true
         return transition
     }
     
