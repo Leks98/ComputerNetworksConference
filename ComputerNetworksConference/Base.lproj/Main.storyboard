@@ -265,7 +265,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EzU-bk-VLR" userLabel="BackgroundView">
                                 <rect key="frame" x="324" y="0.0" width="90" height="896"/>
-                                <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="ModalBackground"/>
                                 <gestureRecognizers/>
                             </view>
                         </subviews>
@@ -419,22 +419,22 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5T0-et-nj7">
                                         <rect key="frame" x="25" y="290" width="274" height="269"/>
                                         <subviews>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycG-GK-qMl">
-                                                <rect key="frame" x="0.0" y="0.0" width="274" height="244"/>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycG-GK-qMl">
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="269"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label label label label label label label label label label label lab bu" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9Y-sc-Z9j">
-                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="79.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="43"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="textColor" name="ModalTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="j9Y-sc-Z9j" firstAttribute="height" secondItem="ycG-GK-qMl" secondAttribute="height" multiplier="0.295082" id="Iid-eR-sTY"/>
-                                                    <constraint firstAttribute="trailing" secondItem="j9Y-sc-Z9j" secondAttribute="trailing" id="KBO-v9-hss"/>
-                                                    <constraint firstItem="j9Y-sc-Z9j" firstAttribute="width" secondItem="ycG-GK-qMl" secondAttribute="width" id="PjN-dJ-m5B"/>
-                                                    <constraint firstItem="j9Y-sc-Z9j" firstAttribute="leading" secondItem="ycG-GK-qMl" secondAttribute="leading" id="t5y-XW-IBN"/>
-                                                    <constraint firstItem="j9Y-sc-Z9j" firstAttribute="top" secondItem="ycG-GK-qMl" secondAttribute="top" id="yqA-fT-cqy"/>
+                                                    <constraint firstItem="j9Y-sc-Z9j" firstAttribute="leading" secondItem="ycG-GK-qMl" secondAttribute="leading" id="11F-y5-2CT"/>
+                                                    <constraint firstAttribute="bottom" secondItem="j9Y-sc-Z9j" secondAttribute="bottom" id="8nU-V1-HGM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="j9Y-sc-Z9j" secondAttribute="trailing" id="G8v-8M-KG1"/>
+                                                    <constraint firstItem="j9Y-sc-Z9j" firstAttribute="top" secondItem="ycG-GK-qMl" secondAttribute="top" id="UjD-nm-Phs"/>
+                                                    <constraint firstItem="j9Y-sc-Z9j" firstAttribute="width" secondItem="ycG-GK-qMl" secondAttribute="width" id="wGZ-bm-pdM"/>
                                                 </constraints>
                                                 <viewLayoutGuide key="contentLayoutGuide" id="BoJ-bX-fCw"/>
                                                 <viewLayoutGuide key="frameLayoutGuide" id="WoI-lZ-HIu"/>
@@ -720,6 +720,12 @@
         <image name="star" catalog="system" width="64" height="58"/>
         <namedColor name="IconColor">
             <color red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ModalBackground">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ModalTextColor">
+            <color red="0.42349472640000002" green="0.42354890699999997" blue="0.42347633839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
