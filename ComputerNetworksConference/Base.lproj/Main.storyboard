@@ -422,8 +422,8 @@
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycG-GK-qMl">
                                                 <rect key="frame" x="0.0" y="0.0" width="274" height="269"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label label label label label label label label label label label lab bu" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9Y-sc-Z9j">
-                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="43"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9Y-sc-Z9j">
+                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="21.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <color key="textColor" name="ModalTextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -496,6 +496,7 @@
                     <connections>
                         <outlet property="headerTitle" destination="3f5-Iu-YKF" id="zWv-IK-N8a"/>
                         <outlet property="mainTable" destination="btt-1p-oTq" id="cgo-2w-4um"/>
+                        <outlet property="photoDetailsModal" destination="58F-eF-sKZ" id="fgq-yG-5ZW"/>
                         <outlet property="scrollView" destination="ycG-GK-qMl" id="C1z-rZ-MtJ"/>
                         <outlet property="textLabel" destination="j9Y-sc-Z9j" id="pOB-Cn-EEd"/>
                     </connections>

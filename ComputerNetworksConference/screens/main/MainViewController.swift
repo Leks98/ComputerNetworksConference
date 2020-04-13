@@ -10,7 +10,8 @@ import UIKit
 
 class MainViewController:
 UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
-
+    
+    @IBOutlet weak var photoDetailsModal: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var headerTitle: UILabel!
@@ -24,6 +25,9 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         mainTable.delegate = self
         mainTable.dataSource = self
         scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: textLabel.bottomAnchor).isActive=true
+        photoDetailsModal.layer.cornerRadius = 10
+        photoDetailsModal.layer.masksToBounds = true
+        photoDetailsModal.alpha = 0.0
     }
     
     func roundButton(_ button: UIButton) {
@@ -65,5 +69,12 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         return transition
     }
    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
  
+    func openPhotoDetailModal() {
+        photoDetailsModal.alpha = 1.0
+    }
+    
 }
