@@ -69,10 +69,6 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         return transition
     }
    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
- 
     func openPhotoDetailModal() {
         photoDetailsModal.alpha = 1.0
     }
