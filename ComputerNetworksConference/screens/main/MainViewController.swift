@@ -11,6 +11,7 @@ import UIKit
 class MainViewController:
 UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
     
+    @IBOutlet weak var modalBackground: UIView!
     @IBOutlet weak var photoDetailsModal: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var textLabel: UILabel!
@@ -28,6 +29,7 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         photoDetailsModal.layer.cornerRadius = 10
         photoDetailsModal.layer.masksToBounds = true
         photoDetailsModal.alpha = 0.0
+        modalBackground.alpha = 0.0
     }
     
     func roundButton(_ button: UIButton) {
@@ -53,6 +55,7 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
     }
 
     @IBAction func SideMenuButtonPressed(_ sender: UIButton) {
+        modalBackground.alpha = 1.0
         guard let sideMenuViewController = storyboard?.instantiateViewController(identifier: "SideMenuViewController") else {return}
         sideMenuViewController.modalPresentationStyle = .overCurrentContext
         sideMenuViewController.transitioningDelegate = self
@@ -71,6 +74,7 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
    
     func openPhotoDetailModal() {
         photoDetailsModal.alpha = 1.0
+        modalBackground.alpha = 1.0
     }
     
 }
