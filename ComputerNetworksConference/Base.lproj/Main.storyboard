@@ -577,20 +577,23 @@
                                     <constraint firstItem="DPG-4d-Wed" firstAttribute="centerX" secondItem="q95-aa-PYW" secondAttribute="centerX" id="sVS-In-yUh"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xy1-75-Azd">
-                                <rect key="frame" x="87" y="249" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xy1-75-Azd">
+                                <rect key="frame" x="0.0" y="106" width="414" height="790"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="LOc-F9-IPu" firstAttribute="leading" secondItem="2Vf-LZ-ZL4" secondAttribute="leading" id="0Zt-Xc-uC3"/>
+                            <constraint firstAttribute="bottom" secondItem="Xy1-75-Azd" secondAttribute="bottom" id="65e-Ln-U2e"/>
                             <constraint firstAttribute="trailing" secondItem="LOc-F9-IPu" secondAttribute="trailing" id="8qy-Hs-UC2"/>
                             <constraint firstItem="LOc-F9-IPu" firstAttribute="top" secondItem="2Vf-LZ-ZL4" secondAttribute="top" id="Eil-0h-YhO"/>
-                            <constraint firstItem="q95-aa-PYW" firstAttribute="leading" secondItem="SOc-VR-UGB" secondAttribute="leading" id="QUB-vm-3CF"/>
-                            <constraint firstItem="SOc-VR-UGB" firstAttribute="trailing" secondItem="q95-aa-PYW" secondAttribute="trailing" id="aK6-CC-EMf"/>
+                            <constraint firstAttribute="trailing" secondItem="Xy1-75-Azd" secondAttribute="trailing" id="Zqx-r2-evv"/>
                             <constraint firstItem="q95-aa-PYW" firstAttribute="top" secondItem="LOc-F9-IPu" secondAttribute="bottom" id="aZc-AF-wi2"/>
+                            <constraint firstItem="Xy1-75-Azd" firstAttribute="leading" secondItem="2Vf-LZ-ZL4" secondAttribute="leading" id="gkc-GH-Sad"/>
+                            <constraint firstItem="Xy1-75-Azd" firstAttribute="top" secondItem="q95-aa-PYW" secondAttribute="bottom" id="rLP-GY-1WP"/>
+                            <constraint firstAttribute="trailing" secondItem="q95-aa-PYW" secondAttribute="trailing" id="sDQ-C7-MTA"/>
+                            <constraint firstItem="q95-aa-PYW" firstAttribute="leading" secondItem="2Vf-LZ-ZL4" secondAttribute="leading" id="vHU-x8-RRg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SOc-VR-UGB"/>
                     </view>
@@ -920,7 +923,7 @@
         <image name="list.bullet" catalog="system" width="64" height="44"/>
         <image name="location" catalog="system" width="64" height="56"/>
         <image name="person.2" catalog="system" width="64" height="40"/>
-        <image name="person.2.fill" catalog="system" width="64" height="40"/>
+        <image name="person.2.fill" catalog="system" width="32" height="32"/>
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
         <image name="phone.down.fill" catalog="system" width="64" height="26"/>
         <image name="star" catalog="system" width="64" height="58"/>
