@@ -21,7 +21,7 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         let fromViewController = transitionContext.viewController(forKey: .from) else { return }
         let containerView = transitionContext.containerView
         
-        let finalWidth = toViewController.view.bounds.width
+        let finalWidth = toViewController.view.bounds.width * 0.8
         let finalHeight = toViewController.view.bounds.height
         if isPresenting {
             containerView.addSubview(toViewController.view)

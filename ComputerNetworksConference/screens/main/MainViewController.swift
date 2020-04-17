@@ -17,6 +17,7 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var mainTable: UITableView!
+    var sideMenuDelegate: SideMenuModalDelegate?
     let transition = SlideInTransition()
     
     var tab = [[13, 17], [8,10,12]]
@@ -30,6 +31,9 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         photoDetailsModal.layer.masksToBounds = true
         photoDetailsModal.alpha = 0.0
         modalBackground.alpha = 0.0
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.closeSideMenu))
+                     modalBackground.addGestureRecognizer(gestureRecognizer)
+                     modalBackground.isUserInteractionEnabled = true
     }
     
     func roundButton(_ button: UIButton) {
@@ -56,9 +60,10 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
 
     @IBAction func SideMenuButtonPressed(_ sender: UIButton) {
         modalBackground.alpha = 1.0
-        guard let sideMenuViewController = storyboard?.instantiateViewController(identifier: "SideMenuViewController") else {return}
+        guard let sideMenuViewController: SideMenuViewController = storyboard?.instantiateViewController(identifier: "SideMenuViewController") else {return}
         sideMenuViewController.modalPresentationStyle = .overCurrentContext
         sideMenuViewController.transitioningDelegate = self
+        sideMenuDelegate = sideMenuViewController
         present(sideMenuViewController, animated: true)
     }
     
@@ -76,5 +81,8 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         photoDetailsModal.alpha = 1.0
         modalBackground.alpha = 1.0
     }
-    
+    @objc func closeSideMenu(){
+        sideMenuDelegate?.closeModal()
+        modalBackground.alpha = 0.0
+    }
 }
