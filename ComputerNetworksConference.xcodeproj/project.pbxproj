@@ -172,9 +172,9 @@
 			isa = PBXGroup;
 			children = (
 				5B84253C2445FF18000EE795 /* emergency */,
-				5BF2B27F2441D535006EAA6A /* sideMenu */,
 				5BC0E876243DC146004F792C /* agenda */,
 				5BDCA573243CDAF200D73C3D /* main */,
+				5BF2B27F2441D535006EAA6A /* sideMenu */,
 			);
 			path = screens;
 			sourceTree = "<group>";

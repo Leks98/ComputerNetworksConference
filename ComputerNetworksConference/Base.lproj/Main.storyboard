@@ -518,21 +518,66 @@
             </objects>
             <point key="canvasLocation" x="-607.24637681159425" y="602.67857142857144"/>
         </scene>
-        <!--Item 2-->
+        <!--Building-->
         <scene sceneID="A0r-4O-mbE">
             <objects>
                 <viewController id="fix-69-Bly" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nec-MV-3qC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yrp-OS-oaq" userLabel="Header">
+                                <rect key="frame" x="0.0" y="40" width="414" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl7-ze-S2l">
+                                        <rect key="frame" x="186" y="21" width="42" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-BQ-IGk" userLabel="SideMenuButton">
+                                        <rect key="frame" x="10" y="13" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="EEw-eF-kJx"/>
+                                            <constraint firstAttribute="width" secondItem="EP7-BQ-IGk" secondAttribute="height" multiplier="1:1" id="x8U-Zy-LeA"/>
+                                        </constraints>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" image="list.bullet" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Wl7-ze-S2l" firstAttribute="centerX" secondItem="Yrp-OS-oaq" secondAttribute="centerX" id="TDJ-52-mbV"/>
+                                    <constraint firstItem="EP7-BQ-IGk" firstAttribute="centerY" secondItem="Yrp-OS-oaq" secondAttribute="centerY" id="ZUh-Rg-vd7"/>
+                                    <constraint firstItem="Wl7-ze-S2l" firstAttribute="centerY" secondItem="Yrp-OS-oaq" secondAttribute="centerY" id="ahB-fn-KIg"/>
+                                    <constraint firstAttribute="height" constant="66" id="giF-bV-LBo"/>
+                                    <constraint firstItem="EP7-BQ-IGk" firstAttribute="leading" secondItem="Yrp-OS-oaq" secondAttribute="leading" constant="10" id="iEj-j5-6jZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1E-G9-zOb" userLabel="TopBar">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="V4e-4e-ZMd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Yrp-OS-oaq" secondAttribute="trailing" id="1Ag-WB-hJg"/>
+                            <constraint firstItem="Yrp-OS-oaq" firstAttribute="top" secondItem="Q1E-G9-zOb" secondAttribute="bottom" id="DmJ-X7-Mxy"/>
+                            <constraint firstAttribute="trailing" secondItem="Q1E-G9-zOb" secondAttribute="trailing" id="X1P-LR-nWL"/>
+                            <constraint firstItem="Q1E-G9-zOb" firstAttribute="top" secondItem="Nec-MV-3qC" secondAttribute="top" id="aHM-Oi-km8"/>
+                            <constraint firstItem="Q1E-G9-zOb" firstAttribute="leading" secondItem="Nec-MV-3qC" secondAttribute="leading" id="hKh-5x-NpL"/>
+                            <constraint firstItem="Yrp-OS-oaq" firstAttribute="leading" secondItem="Nec-MV-3qC" secondAttribute="leading" id="tCd-qL-X5O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="K69-vG-yv5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="tYT-SH-JmQ"/>
+                    <tabBarItem key="tabBarItem" title="Building" image="map.fill" catalog="system" selectedImage="map" id="tYT-SH-JmQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhx-hg-RIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1775" y="-127"/>
+            <point key="canvasLocation" x="838" y="603"/>
         </scene>
         <!--Emergency-->
         <scene sceneID="nkx-5U-7dQ">
@@ -566,6 +611,9 @@
                                         </constraints>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" image="list.bullet" catalog="system"/>
+                                        <connections>
+                                            <action selector="sideMenuButtonPressed:" destination="Rr1-uW-DSi" eventType="touchUpInside" id="A1c-7P-VsL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -677,7 +725,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1R-W4-ln4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768.11594202898561" y="-367.63392857142856"/>
+            <point key="canvasLocation" x="100" y="603"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1nm-f0-mrg">
@@ -698,7 +746,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5D-wF-A0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-286" y="-127"/>
+            <point key="canvasLocation" x="472" y="-125"/>
         </scene>
         <!--Agenda-->
         <scene sceneID="nHg-tL-z0B">
@@ -984,7 +1032,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNT-Oa-9dr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100.00000000000001" y="602.67857142857144"/>
+            <point key="canvasLocation" x="1594" y="603"/>
         </scene>
     </scenes>
     <resources>
@@ -1000,6 +1048,8 @@
         <image name="image1" width="266.66665649414062" height="133.33332824707031"/>
         <image name="list.bullet" catalog="system" width="64" height="44"/>
         <image name="location" catalog="system" width="64" height="56"/>
+        <image name="map" catalog="system" width="64" height="56"/>
+        <image name="map.fill" catalog="system" width="64" height="56"/>
         <image name="person.2" catalog="system" width="64" height="40"/>
         <image name="person.2.fill" catalog="system" width="64" height="40"/>
         <image name="person.3.fill" catalog="system" width="71" height="34"/>

@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 
-class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var agendaTable: UITableView!
+    let transition = SlideInTransition()
     
     var tab = [[13432422, 17423324], [8,10,12]]
     
@@ -56,9 +57,23 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     @IBAction func sideMenuButttonPressed(_ sender: Any) {
-        
+        guard let sideMenuViewController = storyboard?.instantiateViewController(identifier: "SideMenuViewController") else {return}
+        sideMenuViewController.modalPresentationStyle = .overCurrentContext
+        sideMenuViewController.transitioningDelegate = self
+        present(sideMenuViewController, animated: true)
     }
+    
     @IBAction func generalizedAgendaPressed(_ sender: Any) {
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = true
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = false
+        return transition
     }
     
 }

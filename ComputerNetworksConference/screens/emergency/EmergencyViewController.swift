@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class EmergencyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EmergencyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var emergencyTable: UITableView!
+    let transition = SlideInTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,5 +29,21 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
         if let photoCell = cell as? EmergencyCell {
         }
         return cell
+    }
+    @IBAction func sideMenuButtonPressed(_ sender: UIButton) {
+        guard let sideMenuViewController = storyboard?.instantiateViewController(identifier: "SideMenuViewController") else {return}
+        sideMenuViewController.modalPresentationStyle = .overCurrentContext
+        sideMenuViewController.transitioningDelegate = self
+        present(sideMenuViewController, animated: true)
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = true
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.isPresenting = false
+        return transition
     }
 }
