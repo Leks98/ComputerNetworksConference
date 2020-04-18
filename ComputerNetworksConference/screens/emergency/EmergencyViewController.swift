@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class EmergencyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
+    @IBOutlet weak var sideMenuLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var sideMenuTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var modalBackground: UIView!
     
     @IBOutlet weak var emergencyTable: UITableView!
     let transition = SlideInTransition()
@@ -18,6 +21,29 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         emergencyTable.delegate = self
         emergencyTable.dataSource = self
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideSideModal))
+        modalBackground.addGestureRecognizer(gestureRecognizer)
+        modalBackground.isUserInteractionEnabled = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        hideSideModal()
+    }
+    
+    @objc func hideSideModal() {
+        let screenWidth = self.view.bounds.width
+        sideMenuLeadingConstraint.constant = -screenWidth
+        sideMenuTrailingConstraint.constant = screenWidth + 90
+        modalBackground.alpha = 0.0
+    }
+    
+    func showSideModal() {
+        sideMenuLeadingConstraint.constant = 0
+        sideMenuTrailingConstraint.constant = 90
+        UIView.animate(withDuration: 3.0, animations: {
+            self.view.layoutIfNeeded()
+        })
+        modalBackground.alpha = 1.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,10 +57,11 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     @IBAction func sideMenuButtonPressed(_ sender: UIButton) {
-        guard let sideMenuViewController = storyboard?.instantiateViewController(identifier: "SideMenuViewController") else {return}
+        showSideModal()
+        /*guard let sideMenuViewController = storyboard?.instantiateViewController(identifier: "SideMenuViewController") else {return}
         sideMenuViewController.modalPresentationStyle = .overCurrentContext
         sideMenuViewController.transitioningDelegate = self
-        present(sideMenuViewController, animated: true)
+        present(sideMenuViewController, animated: true)*/
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

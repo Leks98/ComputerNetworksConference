@@ -20,7 +20,8 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
     var sideMenuDelegate: SideMenuModalDelegate?
     let transition = SlideInTransition()
     @IBOutlet weak var sideMenuContainerView: UIView!
-    
+    @IBOutlet weak var sideMenuTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var sideMenuLeadingConstraint: NSLayoutConstraint!
     var tab = [[13, 17], [8,10,12]]
     
     override func viewDidLoad() {
@@ -30,13 +31,17 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: textLabel.bottomAnchor).isActive=true
         photoDetailsModal.layer.cornerRadius = 10
         photoDetailsModal.layer.masksToBounds = true
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.closeSideMenu))
-                     modalBackground.addGestureRecognizer(gestureRecognizer)
-                     modalBackground.isUserInteractionEnabled = true
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideSideMenu))
+        modalBackground.addGestureRecognizer(gestureRecognizer)
+        modalBackground.isUserInteractionEnabled = true
+        UIView.animate(withDuration: 0.0, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        closeSideMenu()
+        hideSideMenu()
+        hidePhotoDetailModal()
     }
     
     func roundButton(_ button: UIButton) {
@@ -61,15 +66,10 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let sideMenuViewController = segue.destination as? SideMenuViewController {
-            sideMenuDelegate = sideMenuViewController
-        }
-    }
     
     @IBAction func SideMenuButtonPressed(_ sender: UIButton) {
-        modalBackground.alpha = 1.0
-        sideMenuContainerView.alpha = 1.0
+        showSideMenu()
+        
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -81,10 +81,31 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         transition.isPresenting = false
         return transition
     }
-   
+    func showSideMenu(){
+        sideMenuLeadingConstraint.constant = 0
+        sideMenuTrailingConstraint.constant = 90
+        modalBackground.alpha = 1.0
+        UIView.animate(withDuration: 1.0, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    @objc func hideSideMenu(){
+        let screenWidth = self.view.bounds.width
+        sideMenuLeadingConstraint.constant = -screenWidth
+        sideMenuTrailingConstraint.constant = 90 + screenWidth
+        modalBackground.alpha = 0.0
+        UIView.animate(withDuration: 1.0, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
     func openPhotoDetailModal() {
         photoDetailsModal.alpha = 1.0
         modalBackground.alpha = 1.0
+    }
+    
+    func hidePhotoDetailModal() {
+        photoDetailsModal.alpha = 0.0
+        modalBackground.alpha = 0.0
     }
     @objc func closeSideMenu(){
         sideMenuContainerView.alpha = 0.0

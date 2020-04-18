@@ -385,12 +385,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" name="ModalBackground"/>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9A-ho-eKX" userLabel="SideMenuContainerView">
-                                <rect key="frame" x="0.0" y="0.0" width="324" height="813"/>
-                                <connections>
-                                    <segue destination="gJk-HK-3jF" kind="embed" id="IBH-yo-YGq"/>
-                                </connections>
-                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58F-eF-sKZ" userLabel="PhotoDetails">
                                 <rect key="frame" x="45" y="144" width="324" height="569"/>
                                 <subviews>
@@ -474,6 +468,12 @@
                                     <constraint firstItem="jvp-Qe-wlq" firstAttribute="leading" secondItem="58F-eF-sKZ" secondAttribute="leading" id="xJy-bG-9hK"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9A-ho-eKX" userLabel="SideMenuContainerView">
+                                <rect key="frame" x="0.0" y="0.0" width="324" height="813"/>
+                                <connections>
+                                    <segue destination="gJk-HK-3jF" kind="embed" id="IBH-yo-YGq"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -512,7 +512,9 @@
                         <outlet property="modalBackground" destination="q7j-ha-YBe" id="ggo-Th-dbS"/>
                         <outlet property="photoDetailsModal" destination="58F-eF-sKZ" id="fgq-yG-5ZW"/>
                         <outlet property="scrollView" destination="ycG-GK-qMl" id="C1z-rZ-MtJ"/>
-                        <outlet property="sideMenuContainerView" destination="G9A-ho-eKX" id="Y4k-ZC-16S"/>
+                        <outlet property="sideMenuContainerView" destination="sYr-ln-N8n" id="weg-cd-h7M"/>
+                        <outlet property="sideMenuLeadingConstraint" destination="sYr-ln-N8n" id="An2-Zy-ztA"/>
+                        <outlet property="sideMenuTrailingConstraint" destination="CgX-u9-f3j" id="rmy-3x-sUG"/>
                         <outlet property="textLabel" destination="j9Y-sc-Z9j" id="pOB-Cn-EEd"/>
                     </connections>
                 </viewController>
@@ -712,7 +714,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xcn-b5-4qw">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmu-6r-gPP" userLabel="ModalBackground">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" name="ModalBackground"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xcn-b5-4qw" userLabel="SideMenuContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="324" height="896"/>
                                 <connections>
                                     <segue destination="gJk-HK-3jF" kind="embed" id="dNC-Wn-P2u"/>
@@ -727,10 +733,14 @@
                             <constraint firstAttribute="bottom" secondItem="Xy1-75-Azd" secondAttribute="bottom" id="65e-Ln-U2e"/>
                             <constraint firstAttribute="trailing" secondItem="LOc-F9-IPu" secondAttribute="trailing" id="8qy-Hs-UC2"/>
                             <constraint firstItem="Xcn-b5-4qw" firstAttribute="top" secondItem="2Vf-LZ-ZL4" secondAttribute="top" id="Blf-0w-IOj"/>
+                            <constraint firstItem="cmu-6r-gPP" firstAttribute="leading" secondItem="2Vf-LZ-ZL4" secondAttribute="leading" id="DJJ-Pt-V0t"/>
                             <constraint firstItem="Xcn-b5-4qw" firstAttribute="leading" secondItem="2Vf-LZ-ZL4" secondAttribute="leading" id="DXH-et-G4L"/>
                             <constraint firstItem="LOc-F9-IPu" firstAttribute="top" secondItem="2Vf-LZ-ZL4" secondAttribute="top" id="Eil-0h-YhO"/>
+                            <constraint firstItem="cmu-6r-gPP" firstAttribute="top" secondItem="2Vf-LZ-ZL4" secondAttribute="top" id="Iri-Lz-6R8"/>
                             <constraint firstAttribute="trailing" secondItem="Xy1-75-Azd" secondAttribute="trailing" id="Zqx-r2-evv"/>
                             <constraint firstItem="q95-aa-PYW" firstAttribute="top" secondItem="LOc-F9-IPu" secondAttribute="bottom" id="aZc-AF-wi2"/>
+                            <constraint firstAttribute="bottom" secondItem="cmu-6r-gPP" secondAttribute="bottom" id="coQ-zG-BV6"/>
+                            <constraint firstAttribute="trailing" secondItem="cmu-6r-gPP" secondAttribute="trailing" id="dFB-fJ-Zly"/>
                             <constraint firstItem="Xy1-75-Azd" firstAttribute="leading" secondItem="2Vf-LZ-ZL4" secondAttribute="leading" id="gkc-GH-Sad"/>
                             <constraint firstItem="Xy1-75-Azd" firstAttribute="top" secondItem="q95-aa-PYW" secondAttribute="bottom" id="rLP-GY-1WP"/>
                             <constraint firstAttribute="trailing" secondItem="q95-aa-PYW" secondAttribute="trailing" id="sDQ-C7-MTA"/>
@@ -743,6 +753,9 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="emergencyTable" destination="Xy1-75-Azd" id="f7J-w3-Tda"/>
+                        <outlet property="modalBackground" destination="cmu-6r-gPP" id="cXk-YB-Ia5"/>
+                        <outlet property="sideMenuLeadingConstraint" destination="DXH-et-G4L" id="Xtl-9I-aaZ"/>
+                        <outlet property="sideMenuTrailingConstraint" destination="3aT-B3-cV8" id="hi7-C3-I8m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1R-W4-ln4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
