@@ -938,7 +938,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9BN-yv-yV2" userLabel="ModalBackground">
-                                <rect key="frame" x="0.0" y="106" width="414" height="707"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" name="ModalBackground"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8T-qj-pVG" userLabel="EventDetails">
@@ -1081,7 +1081,7 @@
                             <constraint firstItem="ZCp-Cr-pmD" firstAttribute="trailing" secondItem="dzY-9u-fh0" secondAttribute="trailing" id="Uxv-Yb-BlI"/>
                             <constraint firstItem="lTi-N7-Peq" firstAttribute="bottom" secondItem="9BN-yv-yV2" secondAttribute="bottom" id="W9j-cc-4Pe"/>
                             <constraint firstItem="Y1d-6w-hSm" firstAttribute="top" secondItem="dzY-9u-fh0" secondAttribute="top" id="WCZ-an-AJf"/>
-                            <constraint firstItem="9BN-yv-yV2" firstAttribute="top" secondItem="ZCp-Cr-pmD" secondAttribute="bottom" id="bEW-r8-NK2"/>
+                            <constraint firstItem="9BN-yv-yV2" firstAttribute="top" secondItem="dzY-9u-fh0" secondAttribute="top" id="bEW-r8-NK2"/>
                             <constraint firstAttribute="trailing" secondItem="Y1d-6w-hSm" secondAttribute="trailing" constant="90" id="hgM-RA-UCM"/>
                             <constraint firstItem="y41-rm-VmP" firstAttribute="leading" secondItem="dzY-9u-fh0" secondAttribute="leading" id="kft-it-dIl"/>
                             <constraint firstItem="o8T-qj-pVG" firstAttribute="leading" secondItem="dzY-9u-fh0" secondAttribute="leadingMargin" constant="25" id="oA5-gQ-FLK"/>
