@@ -9,7 +9,7 @@
 import UIKit
 
 class MainViewController:
-UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
+UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var modalBackground: UIView!
     @IBOutlet weak var photoDetailsModal: UIView!
@@ -18,7 +18,6 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var mainTable: UITableView!
     var sideMenuDelegate: SideMenuModalDelegate?
-    let transition = SlideInTransition()
     @IBOutlet weak var sideMenuContainerView: UIView!
     @IBOutlet weak var sideMenuTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var sideMenuLeadingConstraint: NSLayoutConstraint!
@@ -32,22 +31,14 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         photoDetailsModal.layer.cornerRadius = 10
         photoDetailsModal.layer.masksToBounds = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideSideMenu))
+        gestureRecognizer.addTarget(self, action: #selector(self.hidePhotoDetailModal))
         modalBackground.addGestureRecognizer(gestureRecognizer)
         modalBackground.isUserInteractionEnabled = true
-        UIView.animate(withDuration: 0.0, animations: {
-            self.view.layoutIfNeeded()
-        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
         hideSideMenu()
         hidePhotoDetailModal()
-    }
-    
-    func roundButton(_ button: UIButton) {
-        button.clipsToBounds = true
-        button.layer.cornerRadius = CGFloat(10.0)
-        button.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,21 +57,14 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showPhotoDetailModal()
+    }
     
     @IBAction func SideMenuButtonPressed(_ sender: UIButton) {
         showSideMenu()
-        
     }
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = true
-        return transition
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = false
-        return transition
-    }
     func showSideMenu(){
         sideMenuLeadingConstraint.constant = 0
         sideMenuTrailingConstraint.constant = 90
@@ -94,22 +78,16 @@ UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTr
         sideMenuLeadingConstraint.constant = -screenWidth
         sideMenuTrailingConstraint.constant = 90 + screenWidth
         modalBackground.alpha = 0.0
-        UIView.animate(withDuration: 1.0, animations: {
-            self.view.layoutIfNeeded()
-        })
     }
-    func openPhotoDetailModal() {
-        photoDetailsModal.alpha = 1.0
+    func showPhotoDetailModal() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.photoDetailsModal.alpha = 1.0
+        })
         modalBackground.alpha = 1.0
     }
     
-    func hidePhotoDetailModal() {
+    @objc func hidePhotoDetailModal() {
         photoDetailsModal.alpha = 0.0
         modalBackground.alpha = 0.0
-    }
-    @objc func closeSideMenu(){
-        sideMenuContainerView.alpha = 0.0
-        modalBackground.alpha = 0.0
-        photoDetailsModal.alpha = 0.0
     }
 }

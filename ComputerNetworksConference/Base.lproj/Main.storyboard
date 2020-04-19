@@ -525,11 +525,18 @@
         <!--Building-->
         <scene sceneID="A0r-4O-mbE">
             <objects>
-                <viewController id="fix-69-Bly" sceneMemberID="viewController">
+                <viewController id="fix-69-Bly" customClass="BuildingViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nec-MV-3qC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1E-G9-zOb" userLabel="TopBar">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="V4e-4e-ZMd"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yrp-OS-oaq" userLabel="Header">
                                 <rect key="frame" x="0.0" y="40" width="414" height="66"/>
                                 <subviews>
@@ -547,6 +554,9 @@
                                         </constraints>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" image="list.bullet" catalog="system"/>
+                                        <connections>
+                                            <action selector="sideMenuButtonPressed:" destination="fix-69-Bly" eventType="touchUpInside" id="L65-eI-Pqj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -558,14 +568,11 @@
                                     <constraint firstItem="EP7-BQ-IGk" firstAttribute="leading" secondItem="Yrp-OS-oaq" secondAttribute="leading" constant="10" id="iEj-j5-6jZ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1E-G9-zOb" userLabel="TopBar">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="V4e-4e-ZMd"/>
-                                </constraints>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25X-fa-Ddg" userLabel="ModalBackground">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" name="ModalBackground"/>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0c-fV-ZQp">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0c-fV-ZQp" userLabel="SideMenuContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="324" height="896"/>
                                 <connections>
                                     <segue destination="gJk-HK-3jF" kind="embed" id="Ypi-mB-s6P"/>
@@ -577,9 +584,13 @@
                             <constraint firstAttribute="trailing" secondItem="Yrp-OS-oaq" secondAttribute="trailing" id="1Ag-WB-hJg"/>
                             <constraint firstItem="Yrp-OS-oaq" firstAttribute="top" secondItem="Q1E-G9-zOb" secondAttribute="bottom" id="DmJ-X7-Mxy"/>
                             <constraint firstItem="s0c-fV-ZQp" firstAttribute="leading" secondItem="Nec-MV-3qC" secondAttribute="leading" id="OUy-VF-cUv"/>
+                            <constraint firstItem="25X-fa-Ddg" firstAttribute="leading" secondItem="Nec-MV-3qC" secondAttribute="leading" id="RCl-Y1-VWa"/>
+                            <constraint firstItem="25X-fa-Ddg" firstAttribute="top" secondItem="Nec-MV-3qC" secondAttribute="top" id="TbB-bY-W2x"/>
+                            <constraint firstAttribute="trailing" secondItem="25X-fa-Ddg" secondAttribute="trailing" id="TdN-kn-61k"/>
                             <constraint firstAttribute="trailing" secondItem="Q1E-G9-zOb" secondAttribute="trailing" id="X1P-LR-nWL"/>
                             <constraint firstItem="s0c-fV-ZQp" firstAttribute="top" secondItem="Nec-MV-3qC" secondAttribute="top" id="YSs-pK-FMo"/>
                             <constraint firstItem="Q1E-G9-zOb" firstAttribute="top" secondItem="Nec-MV-3qC" secondAttribute="top" id="aHM-Oi-km8"/>
+                            <constraint firstAttribute="bottom" secondItem="25X-fa-Ddg" secondAttribute="bottom" id="fHd-QI-y8K"/>
                             <constraint firstItem="Q1E-G9-zOb" firstAttribute="leading" secondItem="Nec-MV-3qC" secondAttribute="leading" id="hKh-5x-NpL"/>
                             <constraint firstAttribute="trailing" secondItem="s0c-fV-ZQp" secondAttribute="trailing" constant="90" id="kmQ-bX-hGG"/>
                             <constraint firstAttribute="bottom" secondItem="s0c-fV-ZQp" secondAttribute="bottom" id="oGh-fj-A0n"/>
@@ -588,6 +599,11 @@
                         <viewLayoutGuide key="safeArea" id="K69-vG-yv5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Building" image="map.fill" catalog="system" selectedImage="map" id="tYT-SH-JmQ"/>
+                    <connections>
+                        <outlet property="modalBackground" destination="25X-fa-Ddg" id="YZV-Di-KdV"/>
+                        <outlet property="sideMenuLeadingConstraint" destination="OUy-VF-cUv" id="5UY-7M-1QV"/>
+                        <outlet property="sideMenuTrailingConstraint" destination="kmQ-bX-hGG" id="iit-WR-v5d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhx-hg-RIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -816,6 +832,7 @@
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" image="list.bullet" catalog="system"/>
                                         <connections>
+                                            <action selector="sideMenuButtonPressed:" destination="YBl-u2-FTf" eventType="touchUpInside" id="9Ms-OA-PDR"/>
                                             <action selector="sideMenuButttonPressed:" destination="YBl-u2-FTf" eventType="touchUpInside" id="9vg-zR-Ac2"/>
                                         </connections>
                                     </button>
@@ -842,7 +859,7 @@
                                     <constraint firstItem="9eS-uE-WsZ" firstAttribute="leading" secondItem="ZCp-Cr-pmD" secondAttribute="leading" constant="10" id="zMC-LH-pYf"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BRL-e0-in9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BRL-e0-in9">
                                 <rect key="frame" x="0.0" y="106" width="414" height="707"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgendaHeaderCell" id="KpU-v6-J3G" customClass="AgendaHeaderCell" customModule="ComputerNetworksConference" customModuleProvider="target">
@@ -920,6 +937,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9BN-yv-yV2" userLabel="ModalBackground">
+                                <rect key="frame" x="0.0" y="106" width="414" height="707"/>
+                                <color key="backgroundColor" name="ModalBackground"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8T-qj-pVG" userLabel="EventDetails">
                                 <rect key="frame" x="45" y="223.5" width="324" height="450"/>
                                 <subviews>
@@ -1037,7 +1058,7 @@
                                     <constraint firstAttribute="trailing" secondItem="OMd-xv-PRw" secondAttribute="trailing" constant="25" id="zi4-v2-NKj"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1d-6w-hSm">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1d-6w-hSm" userLabel="SideMenuContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="324" height="896"/>
                                 <connections>
                                     <segue destination="gJk-HK-3jF" kind="embed" id="hXx-Xn-Tqc"/>
@@ -1046,17 +1067,21 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="lTi-N7-Peq" firstAttribute="trailing" secondItem="9BN-yv-yV2" secondAttribute="trailing" id="5tc-sk-Gfp"/>
                             <constraint firstItem="ZCp-Cr-pmD" firstAttribute="leading" secondItem="dzY-9u-fh0" secondAttribute="leading" id="8mq-ZZ-98B"/>
                             <constraint firstAttribute="bottom" secondItem="Y1d-6w-hSm" secondAttribute="bottom" id="92b-Ym-zK3"/>
                             <constraint firstItem="BRL-e0-in9" firstAttribute="leading" secondItem="dzY-9u-fh0" secondAttribute="leading" id="Av3-vJ-WGF"/>
                             <constraint firstItem="BRL-e0-in9" firstAttribute="top" secondItem="ZCp-Cr-pmD" secondAttribute="bottom" id="D2f-Ey-7Gr"/>
                             <constraint firstAttribute="trailing" secondItem="BRL-e0-in9" secondAttribute="trailing" id="EDG-iE-GOC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o8T-qj-pVG" secondAttribute="trailing" constant="25" id="LBl-Yh-kZD"/>
+                            <constraint firstItem="9BN-yv-yV2" firstAttribute="leading" secondItem="lTi-N7-Peq" secondAttribute="leading" id="MJc-gJ-fUY"/>
                             <constraint firstItem="ZCp-Cr-pmD" firstAttribute="top" secondItem="y41-rm-VmP" secondAttribute="bottom" id="N2Z-rv-yI0"/>
                             <constraint firstItem="o8T-qj-pVG" firstAttribute="centerY" secondItem="lTi-N7-Peq" secondAttribute="centerY" constant="20" id="QwL-Ke-VnU"/>
                             <constraint firstItem="lTi-N7-Peq" firstAttribute="bottom" secondItem="BRL-e0-in9" secondAttribute="bottom" id="TIz-97-doX"/>
                             <constraint firstItem="ZCp-Cr-pmD" firstAttribute="trailing" secondItem="dzY-9u-fh0" secondAttribute="trailing" id="Uxv-Yb-BlI"/>
+                            <constraint firstItem="lTi-N7-Peq" firstAttribute="bottom" secondItem="9BN-yv-yV2" secondAttribute="bottom" id="W9j-cc-4Pe"/>
                             <constraint firstItem="Y1d-6w-hSm" firstAttribute="top" secondItem="dzY-9u-fh0" secondAttribute="top" id="WCZ-an-AJf"/>
+                            <constraint firstItem="9BN-yv-yV2" firstAttribute="top" secondItem="ZCp-Cr-pmD" secondAttribute="bottom" id="bEW-r8-NK2"/>
                             <constraint firstAttribute="trailing" secondItem="Y1d-6w-hSm" secondAttribute="trailing" constant="90" id="hgM-RA-UCM"/>
                             <constraint firstItem="y41-rm-VmP" firstAttribute="leading" secondItem="dzY-9u-fh0" secondAttribute="leading" id="kft-it-dIl"/>
                             <constraint firstItem="o8T-qj-pVG" firstAttribute="leading" secondItem="dzY-9u-fh0" secondAttribute="leadingMargin" constant="25" id="oA5-gQ-FLK"/>
@@ -1072,7 +1097,11 @@
                     <navigationItem key="navigationItem" id="tvW-XE-Zyt"/>
                     <connections>
                         <outlet property="agendaTable" destination="BRL-e0-in9" id="5ha-UR-Bp6"/>
+                        <outlet property="eventDetailsModal" destination="o8T-qj-pVG" id="vVi-Zs-8oY"/>
                         <outlet property="headerTitle" destination="1Ua-CO-aMI" id="FFz-vq-nw3"/>
+                        <outlet property="modalBackground" destination="9BN-yv-yV2" id="q4R-hN-c2C"/>
+                        <outlet property="sideMenuLeadingConstraint" destination="ouG-wJ-pt7" id="gku-w2-0eg"/>
+                        <outlet property="sideMenuTrailingConstraint" destination="hgM-RA-UCM" id="jEG-Ij-6Kl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNT-Oa-9dr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1096,7 +1125,7 @@
         <image name="map" catalog="system" width="64" height="56"/>
         <image name="map.fill" catalog="system" width="64" height="56"/>
         <image name="person.2" catalog="system" width="64" height="40"/>
-        <image name="person.2.fill" catalog="system" width="32" height="32"/>
+        <image name="person.2.fill" catalog="system" width="64" height="40"/>
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
         <image name="phone.down.fill" catalog="system" width="64" height="26"/>
         <image name="star" catalog="system" width="64" height="58"/>
@@ -1112,6 +1141,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dNC-Wn-P2u"/>
+        <segue reference="hXx-Xn-Tqc"/>
     </inferredMetricsTieBreakers>
 </document>

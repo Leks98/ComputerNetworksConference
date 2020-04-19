@@ -13,16 +13,59 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var agendaTable: UITableView!
-    let transition = SlideInTransition()
+
     
+    @IBOutlet weak var sideMenuLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var sideMenuTrailingConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var modalBackground: UIView!
+    
+    @IBOutlet weak var eventDetailsModal: UIView!
     var tab = [[13432422, 17423324], [8,10,12]]
     
     override func viewDidLoad() {
-           super.viewDidLoad()
-           agendaTable.delegate = self
-           agendaTable.dataSource = self
-          
-       }
+        super.viewDidLoad()
+        agendaTable.delegate = self
+        agendaTable.dataSource = self
+
+        eventDetailsModal.layer.cornerRadius = 10
+        eventDetailsModal.layer.masksToBounds = true
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideSideMenu))
+             gestureRecognizer.addTarget(self, action: #selector(self.hideEventDetailsModal))
+             modalBackground.addGestureRecognizer(gestureRecognizer)
+             modalBackground.isUserInteractionEnabled = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        hideSideMenu()
+        hideEventDetailsModal()
+    }
+    func showSideMenu(){
+        sideMenuLeadingConstraint.constant = 0
+        sideMenuTrailingConstraint.constant = 90
+        modalBackground.alpha = 1.0
+        UIView.animate(withDuration: 1.0, animations: {
+            self.view.layoutIfNeeded()
+        })    }
+    @objc func hideSideMenu(){
+        let screenWidth = self.view.bounds.width
+        sideMenuLeadingConstraint.constant = -screenWidth
+        sideMenuTrailingConstraint.constant = 90 + screenWidth
+        modalBackground.alpha = 0.0
+    }
+    func showEventDetailsModal(){
+        modalBackground.alpha = 1.0
+        UIView.animate(withDuration: 0.5, animations: {
+            self.eventDetailsModal.alpha = 1.0
+        })
+    }
+    @objc func hideEventDetailsModal(){
+        eventDetailsModal.alpha = 0.0
+        modalBackground.alpha = 0.0
+    }
+    @IBAction func sideMenuButtonPressed(_ sender: UIButton) {
+        showSideMenu()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tab[section].count
@@ -57,23 +100,16 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     @IBAction func sideMenuButttonPressed(_ sender: Any) {
-        guard let sideMenuViewController = storyboard?.instantiateViewController(identifier: "SideMenuViewController") else {return}
-        sideMenuViewController.modalPresentationStyle = .overCurrentContext
-        sideMenuViewController.transitioningDelegate = self
-        present(sideMenuViewController, animated: true)
+  showSideMenu()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showEventDetailsModal()
+    }
     @IBAction func generalizedAgendaPressed(_ sender: Any) {
+       
     }
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = true
-        return transition
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = false
-        return transition
-    }
+   
     
 }

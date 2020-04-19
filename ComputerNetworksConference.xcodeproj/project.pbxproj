@@ -17,6 +17,7 @@
 		5B4961182423F2780037D3B9 /* ComputerNetworksConferenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4961172423F2780037D3B9 /* ComputerNetworksConferenceUITests.swift */; };
 		5B563539243F2E2F00915529 /* AgendaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B563538243F2E2F00915529 /* AgendaCell.swift */; };
 		5B56353B243F8AD900915529 /* AgendaHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56353A243F8AD900915529 /* AgendaHeaderCell.swift */; };
+		5B70330E244C502D0040FC2A /* BuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B70330D244C502D0040FC2A /* BuildingViewController.swift */; };
 		5B84253E2445FF90000EE795 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B84253D2445FF90000EE795 /* EmergencyViewController.swift */; };
 		5B84254024460160000EE795 /* EmergencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B84253F24460160000EE795 /* EmergencyCell.swift */; };
 		5BAA8CC1243CE36E004511E7 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA8CC0243CE36E004511E7 /* PhotoCell.swift */; };
@@ -62,6 +63,7 @@
 		5B4961192423F2780037D3B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B563538243F2E2F00915529 /* AgendaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaCell.swift; sourceTree = "<group>"; };
 		5B56353A243F8AD900915529 /* AgendaHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaHeaderCell.swift; sourceTree = "<group>"; };
+		5B70330D244C502D0040FC2A /* BuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingViewController.swift; sourceTree = "<group>"; };
 		5B84253D2445FF90000EE795 /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		5B84253F24460160000EE795 /* EmergencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyCell.swift; sourceTree = "<group>"; };
 		5BAA8CC0243CE36E004511E7 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 			path = ComputerNetworksConferenceUITests;
 			sourceTree = "<group>";
 		};
+		5B70330C244C4F390040FC2A /* building */ = {
+			isa = PBXGroup;
+			children = (
+				5B70330D244C502D0040FC2A /* BuildingViewController.swift */,
+			);
+			path = building;
+			sourceTree = "<group>";
+		};
 		5B84253C2445FF18000EE795 /* emergency */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +183,7 @@
 		5BDCA572243CDAE900D73C3D /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				5B70330C244C4F390040FC2A /* building */,
 				5B84253C2445FF18000EE795 /* emergency */,
 				5BC0E876243DC146004F792C /* agenda */,
 				5BDCA573243CDAF200D73C3D /* main */,
@@ -339,6 +350,7 @@
 				5B4960FA2423F2750037D3B9 /* MainViewController.swift in Sources */,
 				5BF2B2812441D57E006EAA6A /* ButtonTableViewController.swift in Sources */,
 				5BC0E878243DC178004F792C /* AgendaViewController.swift in Sources */,
+				5B70330E244C502D0040FC2A /* BuildingViewController.swift in Sources */,
 				5B56353B243F8AD900915529 /* AgendaHeaderCell.swift in Sources */,
 				5B4960F62423F2750037D3B9 /* AppDelegate.swift in Sources */,
 				5BC1A78C244A2FCA00FE96CF /* SideMenuModalDelegate.swift in Sources */,

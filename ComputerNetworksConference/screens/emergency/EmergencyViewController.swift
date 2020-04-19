@@ -40,7 +40,7 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
     func showSideModal() {
         sideMenuLeadingConstraint.constant = 0
         sideMenuTrailingConstraint.constant = 90
-        UIView.animate(withDuration: 3.0, animations: {
+        UIView.animate(withDuration: 1.0, animations: {
             self.view.layoutIfNeeded()
         })
         modalBackground.alpha = 1.0
@@ -58,10 +58,6 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     @IBAction func sideMenuButtonPressed(_ sender: UIButton) {
         showSideModal()
-        /*guard let sideMenuViewController = storyboard?.instantiateViewController(identifier: "SideMenuViewController") else {return}
-        sideMenuViewController.modalPresentationStyle = .overCurrentContext
-        sideMenuViewController.transitioningDelegate = self
-        present(sideMenuViewController, animated: true)*/
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
