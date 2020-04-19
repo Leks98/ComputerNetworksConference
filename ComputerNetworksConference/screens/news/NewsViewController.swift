@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController:
+class NewsViewController:
 UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var modalBackground: UIView!
@@ -59,6 +59,7 @@ UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showPhotoDetailModal()
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     @IBAction func SideMenuButtonPressed(_ sender: UIButton) {

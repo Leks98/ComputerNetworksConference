@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7F-LP-dSr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-848" y="2137"/>
+            <point key="canvasLocation" x="-848" y="2016"/>
         </scene>
         <!--Button Table View Controller-->
         <scene sceneID="x4Z-JG-tLK">
@@ -251,7 +251,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Fo-3o-U1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55" y="1533"/>
+            <point key="canvasLocation" x="-55" y="1412"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="bLN-3j-IKX">
@@ -319,7 +319,7 @@
         <!--News-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewsViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -979,43 +979,43 @@
                                 <rect key="frame" x="45" y="223.5" width="324" height="450"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaA-db-1Le" userLabel="TopBar">
-                                        <rect key="frame" x="25" y="106.5" width="274" height="1"/>
+                                        <rect key="frame" x="25" y="207" width="274" height="1"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="4iL-cy-vBq"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaker speakeruner the thirdgfdgfdgdfgdfgdfgdfgf" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuL-de-CRb" userLabel="Speaker">
-                                        <rect key="frame" x="25" y="112.5" width="274" height="41"/>
+                                        <rect key="frame" x="25" y="213" width="274" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5M-4a-r2o" userLabel="MiddleBar">
-                                        <rect key="frame" x="60" y="158.5" width="204" height="1"/>
+                                        <rect key="frame" x="60" y="259" width="204" height="1"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="nuV-ha-QiR"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place sklodowska 123/324 zawiercie przyjezdzdaj mam wolne lozko" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMd-xv-PRw">
-                                        <rect key="frame" x="25" y="164.5" width="274" height="61"/>
+                                        <rect key="frame" x="25" y="265" width="274" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7K-sl-130" userLabel="BottomBar">
-                                        <rect key="frame" x="25" y="230.5" width="274" height="1"/>
+                                        <rect key="frame" x="25" y="331" width="274" height="1"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="SZy-4c-t0I"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5T-cB-xwY" userLabel="Description">
-                                        <rect key="frame" x="25" y="236.5" width="274" height="173.5"/>
+                                        <rect key="frame" x="25" y="337" width="274" height="73"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qV-2d-O5J">
-                                                <rect key="frame" x="0.0" y="0.0" width="274" height="173.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="73"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNc-gS-pUg" userLabel="Text Label">
                                                         <rect key="frame" x="0.0" y="0.0" width="274" height="129"/>
@@ -1057,7 +1057,7 @@
                                         </state>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ifl-dW-ShG">
-                                        <rect key="frame" x="0.0" y="0.0" width="324" height="101.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="202"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
@@ -1156,7 +1156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMH-nN-sMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1377" y="2135"/>
+            <point key="canvasLocation" x="-1377" y="2015"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="Ekn-CF-Raw">
@@ -1172,7 +1172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6t-bw-8Uo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1268" y="2135"/>
+            <point key="canvasLocation" x="1267" y="2014"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="by7-bv-tXK">
@@ -1188,7 +1188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFa-eM-XAn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="728" y="2137"/>
+            <point key="canvasLocation" x="728" y="2016"/>
         </scene>
         <!--Conference Rating View Controller-->
         <scene sceneID="nPq-35-JI1">
@@ -1204,7 +1204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aq1-Yc-ANV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="199" y="2137"/>
+            <point key="canvasLocation" x="199" y="2016"/>
         </scene>
         <!--Sponsors View Controller-->
         <scene sceneID="zlP-Vw-jIi">
@@ -1220,7 +1220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edu-Qw-Mzm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-335" y="2135"/>
+            <point key="canvasLocation" x="-336" y="2014"/>
         </scene>
     </scenes>
     <resources>

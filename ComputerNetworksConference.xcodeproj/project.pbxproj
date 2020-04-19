@@ -15,7 +15,7 @@
 		5B12AD45244CDF2100597F04 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD44244CDF2100597F04 /* LocationViewController.swift */; };
 		5B4960F62423F2750037D3B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4960F52423F2750037D3B9 /* AppDelegate.swift */; };
 		5B4960F82423F2750037D3B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4960F72423F2750037D3B9 /* SceneDelegate.swift */; };
-		5B4960FA2423F2750037D3B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4960F92423F2750037D3B9 /* MainViewController.swift */; };
+		5B4960FA2423F2750037D3B9 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4960F92423F2750037D3B9 /* NewsViewController.swift */; };
 		5B4960FD2423F2750037D3B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4960FB2423F2750037D3B9 /* Main.storyboard */; };
 		5B4960FF2423F2780037D3B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4960FE2423F2780037D3B9 /* Assets.xcassets */; };
 		5B4961022423F2780037D3B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4961002423F2780037D3B9 /* LaunchScreen.storyboard */; };
@@ -62,7 +62,7 @@
 		5B4960F22423F2750037D3B9 /* ComputerNetworksConference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputerNetworksConference.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4960F52423F2750037D3B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B4960F72423F2750037D3B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B4960F92423F2750037D3B9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5B4960F92423F2750037D3B9 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		5B4960FC2423F2750037D3B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B4960FE2423F2780037D3B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B4961012423F2780037D3B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -252,19 +252,19 @@
 				5B70330C244C4F390040FC2A /* building */,
 				5B84253C2445FF18000EE795 /* emergency */,
 				5BC0E876243DC146004F792C /* agenda */,
-				5BDCA573243CDAF200D73C3D /* main */,
+				5BDCA573243CDAF200D73C3D /* news */,
 				5BF2B27F2441D535006EAA6A /* sideMenu */,
 			);
 			path = screens;
 			sourceTree = "<group>";
 		};
-		5BDCA573243CDAF200D73C3D /* main */ = {
+		5BDCA573243CDAF200D73C3D /* news */ = {
 			isa = PBXGroup;
 			children = (
-				5B4960F92423F2750037D3B9 /* MainViewController.swift */,
+				5B4960F92423F2750037D3B9 /* NewsViewController.swift */,
 				5BAA8CC0243CE36E004511E7 /* PhotoCell.swift */,
 			);
-			path = main;
+			path = news;
 			sourceTree = "<group>";
 		};
 		5BF2B27F2441D535006EAA6A /* sideMenu */ = {
@@ -416,7 +416,7 @@
 				5B563539243F2E2F00915529 /* AgendaCell.swift in Sources */,
 				5B12AD41244CDEC100597F04 /* ConferenceRatingViewController.swift in Sources */,
 				5B12AD3B244CDA3900597F04 /* SpeakersViewController.swift in Sources */,
-				5B4960FA2423F2750037D3B9 /* MainViewController.swift in Sources */,
+				5B4960FA2423F2750037D3B9 /* NewsViewController.swift in Sources */,
 				5BF2B2812441D57E006EAA6A /* ButtonTableViewController.swift in Sources */,
 				5B12AD3F244CDE9000597F04 /* SponsorsViewController.swift in Sources */,
 				5BC0E878243DC178004F792C /* AgendaViewController.swift in Sources */,

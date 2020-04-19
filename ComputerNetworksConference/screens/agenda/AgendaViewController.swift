@@ -105,6 +105,7 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showEventDetailsModal()
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     @IBAction func generalizedAgendaPressed(_ sender: Any) {
        

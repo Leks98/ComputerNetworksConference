@@ -10,5 +10,7 @@ import Foundation
 import UIKit
 
 class ButtonTableViewController: UITableViewController {
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
