@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B12AD3B244CDA3900597F04 /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD3A244CDA3900597F04 /* SpeakersViewController.swift */; };
+		5B12AD3D244CDDAA00597F04 /* OrganizersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD3C244CDDA900597F04 /* OrganizersViewController.swift */; };
+		5B12AD3F244CDE9000597F04 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD3E244CDE9000597F04 /* SponsorsViewController.swift */; };
+		5B12AD41244CDEC100597F04 /* ConferenceRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD40244CDEC100597F04 /* ConferenceRatingViewController.swift */; };
+		5B12AD43244CDEF500597F04 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD42244CDEF500597F04 /* ContactViewController.swift */; };
+		5B12AD45244CDF2100597F04 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD44244CDF2100597F04 /* LocationViewController.swift */; };
 		5B4960F62423F2750037D3B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4960F52423F2750037D3B9 /* AppDelegate.swift */; };
 		5B4960F82423F2750037D3B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4960F72423F2750037D3B9 /* SceneDelegate.swift */; };
 		5B4960FA2423F2750037D3B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4960F92423F2750037D3B9 /* MainViewController.swift */; };
@@ -47,6 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B12AD3A244CDA3900597F04 /* SpeakersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
+		5B12AD3C244CDDA900597F04 /* OrganizersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizersViewController.swift; sourceTree = "<group>"; };
+		5B12AD3E244CDE9000597F04 /* SponsorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
+		5B12AD40244CDEC100597F04 /* ConferenceRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceRatingViewController.swift; sourceTree = "<group>"; };
+		5B12AD42244CDEF500597F04 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		5B12AD44244CDF2100597F04 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		5B4960F22423F2750037D3B9 /* ComputerNetworksConference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputerNetworksConference.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4960F52423F2750037D3B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B4960F72423F2750037D3B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +112,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B12AD34244CD94D00597F04 /* organizers */ = {
+			isa = PBXGroup;
+			children = (
+				5B12AD3C244CDDA900597F04 /* OrganizersViewController.swift */,
+			);
+			path = organizers;
+			sourceTree = "<group>";
+		};
+		5B12AD35244CD99600597F04 /* speakers */ = {
+			isa = PBXGroup;
+			children = (
+				5B12AD3A244CDA3900597F04 /* SpeakersViewController.swift */,
+			);
+			path = speakers;
+			sourceTree = "<group>";
+		};
+		5B12AD36244CD9B300597F04 /* location */ = {
+			isa = PBXGroup;
+			children = (
+				5B12AD44244CDF2100597F04 /* LocationViewController.swift */,
+			);
+			path = location;
+			sourceTree = "<group>";
+		};
+		5B12AD37244CD9BF00597F04 /* contact */ = {
+			isa = PBXGroup;
+			children = (
+				5B12AD42244CDEF500597F04 /* ContactViewController.swift */,
+			);
+			path = contact;
+			sourceTree = "<group>";
+		};
+		5B12AD38244CD9C900597F04 /* conferenceRating */ = {
+			isa = PBXGroup;
+			children = (
+				5B12AD40244CDEC100597F04 /* ConferenceRatingViewController.swift */,
+			);
+			path = conferenceRating;
+			sourceTree = "<group>";
+		};
+		5B12AD39244CD9DA00597F04 /* sponsors */ = {
+			isa = PBXGroup;
+			children = (
+				5B12AD3E244CDE9000597F04 /* SponsorsViewController.swift */,
+			);
+			path = sponsors;
+			sourceTree = "<group>";
+		};
 		5B4960E92423F2750037D3B9 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +243,12 @@
 		5BDCA572243CDAE900D73C3D /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				5B12AD34244CD94D00597F04 /* organizers */,
+				5B12AD35244CD99600597F04 /* speakers */,
+				5B12AD39244CD9DA00597F04 /* sponsors */,
+				5B12AD38244CD9C900597F04 /* conferenceRating */,
+				5B12AD37244CD9BF00597F04 /* contact */,
+				5B12AD36244CD9B300597F04 /* location */,
 				5B70330C244C4F390040FC2A /* building */,
 				5B84253C2445FF18000EE795 /* emergency */,
 				5BC0E876243DC146004F792C /* agenda */,
@@ -346,15 +412,21 @@
 			files = (
 				5BD6F49E24424CA4002055CA /* SlideInTransition.swift in Sources */,
 				5BAA8CC1243CE36E004511E7 /* PhotoCell.swift in Sources */,
+				5B12AD43244CDEF500597F04 /* ContactViewController.swift in Sources */,
 				5B563539243F2E2F00915529 /* AgendaCell.swift in Sources */,
+				5B12AD41244CDEC100597F04 /* ConferenceRatingViewController.swift in Sources */,
+				5B12AD3B244CDA3900597F04 /* SpeakersViewController.swift in Sources */,
 				5B4960FA2423F2750037D3B9 /* MainViewController.swift in Sources */,
 				5BF2B2812441D57E006EAA6A /* ButtonTableViewController.swift in Sources */,
+				5B12AD3F244CDE9000597F04 /* SponsorsViewController.swift in Sources */,
 				5BC0E878243DC178004F792C /* AgendaViewController.swift in Sources */,
 				5B70330E244C502D0040FC2A /* BuildingViewController.swift in Sources */,
 				5B56353B243F8AD900915529 /* AgendaHeaderCell.swift in Sources */,
 				5B4960F62423F2750037D3B9 /* AppDelegate.swift in Sources */,
 				5BC1A78C244A2FCA00FE96CF /* SideMenuModalDelegate.swift in Sources */,
 				5BD6F4A024425F17002055CA /* SideMenuViewController.swift in Sources */,
+				5B12AD45244CDF2100597F04 /* LocationViewController.swift in Sources */,
+				5B12AD3D244CDDAA00597F04 /* OrganizersViewController.swift in Sources */,
 				5B84254024460160000EE795 /* EmergencyCell.swift in Sources */,
 				5B4960F82423F2750037D3B9 /* SceneDelegate.swift in Sources */,
 				5B84253E2445FF90000EE795 /* EmergencyViewController.swift in Sources */,
