@@ -9,6 +9,22 @@
 import Foundation
 import UIKit
 
-class ImportantPlacesViewController: UIViewController {
+class ImportantPlacesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var importantPlacesTableView: UITableView!
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: "ImportantPlacesCell", for: indexPath)
+               if let importantPlacesCell = cell as? ImportantPlacesCell {
+               }
+               return cell    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        importantPlacesTableView.delegate = self
+        importantPlacesTableView.dataSource = self
+    }
     
 }
