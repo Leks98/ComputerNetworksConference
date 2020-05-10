@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5B05734A2467F89E00497068 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0573492467F89E00497068 /* LocationViewController.swift */; };
+		5B05734C246831A300497068 /* AccommodationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05734B246831A300497068 /* AccommodationCell.swift */; };
+		5B05734E246874AE00497068 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05734D246874AE00497068 /* ContactCell.swift */; };
 		5B12AD3B244CDA3900597F04 /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD3A244CDA3900597F04 /* SpeakersViewController.swift */; };
 		5B12AD3D244CDDAA00597F04 /* OrganizersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD3C244CDDA900597F04 /* OrganizersViewController.swift */; };
 		5B12AD3F244CDE9000597F04 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD3E244CDE9000597F04 /* SponsorsViewController.swift */; };
@@ -61,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		5B0573492467F89E00497068 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		5B05734B246831A300497068 /* AccommodationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationCell.swift; sourceTree = "<group>"; };
+		5B05734D246874AE00497068 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		5B12AD3A244CDA3900597F04 /* SpeakersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
 		5B12AD3C244CDDA900597F04 /* OrganizersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizersViewController.swift; sourceTree = "<group>"; };
 		5B12AD3E244CDE9000597F04 /* SponsorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				5B12AD42244CDEF500597F04 /* ContactViewController.swift */,
+				5B05734D246874AE00497068 /* ContactCell.swift */,
 			);
 			path = contact;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				5B2899602460740800F5898A /* AccommodationViewController.swift */,
+				5B05734B246831A300497068 /* AccommodationCell.swift */,
 			);
 			path = accommodation;
 			sourceTree = "<group>";
@@ -474,7 +480,9 @@
 				5B12AD3B244CDA3900597F04 /* SpeakersViewController.swift in Sources */,
 				5B4960FA2423F2750037D3B9 /* NewsViewController.swift in Sources */,
 				5BF2B2812441D57E006EAA6A /* ButtonTableViewController.swift in Sources */,
+				5B05734E246874AE00497068 /* ContactCell.swift in Sources */,
 				5B2899612460740800F5898A /* AccommodationViewController.swift in Sources */,
+				5B05734C246831A300497068 /* AccommodationCell.swift in Sources */,
 				5B12AD3F244CDE9000597F04 /* SponsorsViewController.swift in Sources */,
 				5B28995D246072E300F5898A /* ConferencePlaceViewController.swift in Sources */,
 				5B28995F2460738600F5898A /* ImportantPlacesViewController.swift in Sources */,

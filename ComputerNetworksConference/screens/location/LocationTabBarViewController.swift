@@ -18,6 +18,10 @@ class LocationTabBarViewController: UITabBarController {
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0.0, vertical: 0.0)
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tabBar.frame = CGRect(x: 0,y: 0,width: UIScreen.main.bounds.width,height: 50)
