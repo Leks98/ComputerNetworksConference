@@ -19,7 +19,9 @@ class ImportantPlacesViewController: UIViewController, UITableViewDelegate, UITa
          let cell = tableView.dequeueReusableCell(withIdentifier: "ImportantPlacesCell", for: indexPath)
                if let importantPlacesCell = cell as? ImportantPlacesCell {
                }
-               return cell    }
+               return cell
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

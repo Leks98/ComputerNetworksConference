@@ -1601,6 +1601,10 @@
                                     <constraint firstAttribute="height" constant="66" id="wf3-gy-af0"/>
                                 </constraints>
                             </view>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xQa-Wc-8Ly">
+                                <rect key="frame" x="0.0" y="249" width="324" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1614,6 +1618,9 @@
                         <viewLayoutGuide key="safeArea" id="lbg-To-SjG"/>
                     </view>
                     <navigationItem key="navigationItem" id="hkG-4M-duf"/>
+                    <connections>
+                        <outlet property="StarPickerView" destination="xQa-Wc-8Ly" id="Oat-wW-xhs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aq1-Yc-ANV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1842,36 +1849,34 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImportantPlacesCell" id="5sr-br-pgm" customClass="ImportantPlacesCell" customModule="ComputerNetworksConference" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="324" height="184.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="324" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5sr-br-pgm" id="06H-n2-t3I">
-                                            <rect key="frame" x="0.0" y="0.0" width="324" height="184.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="324" height="146"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pjm-FF-g7f">
-                                                    <rect key="frame" x="25" y="0.0" width="274" height="184.5"/>
+                                                    <rect key="frame" x="25" y="5" width="204" height="131"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pharmacy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOp-LJ-XUu" userLabel="Name">
-                                                            <rect key="frame" x="0.0" y="0.0" width="274" height="30.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="204" height="30.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-T0-uFZ" userLabel="Address Stack View">
-                                                            <rect key="frame" x="0.0" y="40.5" width="274" height="117"/>
+                                                            <rect key="frame" x="0.0" y="40.5" width="204" height="50.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngD-nc-Lqx" userLabel="Address Label">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="117"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location" translatesAutoresizingMaskIntoConstraints="NO" id="RYa-ZH-0eg" userLabel="Address Icon">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="50.5"/>
+                                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="57" id="FK0-R1-LFS"/>
+                                                                        <constraint firstAttribute="width" constant="25" id="M9T-82-yGF"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="c41-Pj-ssU"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idf-Cl-YaQ" userLabel="Address">
-                                                                    <rect key="frame" x="67" y="0.0" width="207" height="117"/>
-                                                                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at nunc eu ligula finibus finibus eu at sem. Cras nec justo vel nibh accumsan ullamcorper.  Sed auctor feugiat lacus, a facilisis leo porta ut.</string>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idf-Cl-YaQ" userLabel="Address">
+                                                                    <rect key="frame" x="35" y="0.0" width="169" height="50.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -1879,19 +1884,18 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WOf-c0-GtI" userLabel="Number Stack View">
-                                                            <rect key="frame" x="0.0" y="167.5" width="274" height="17"/>
+                                                            <rect key="frame" x="0.0" y="101" width="204" height="30"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dW8-du-pcf" userLabel="Number Label">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="56" height="17"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gew-zY-6Y3" userLabel="Address Icon">
+                                                                    <rect key="frame" x="0.0" y="1.5" width="25" height="27.5"/>
+                                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="56" id="heP-5c-9b4"/>
+                                                                        <constraint firstAttribute="width" constant="25" id="1iE-ir-GNc"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Ejh-pZ-EdY"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="165465789" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5d-jT-94f" userLabel="Number">
-                                                                    <rect key="frame" x="66" y="0.0" width="208" height="17"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="165465789" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5d-jT-94f" userLabel="Number">
+                                                                    <rect key="frame" x="35" y="0.0" width="169" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -1900,11 +1904,21 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-google-maps-old" translatesAutoresizingMaskIntoConstraints="NO" id="Pb9-PV-9NK">
+                                                    <rect key="frame" x="239" y="40.5" width="65" height="65"/>
+                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="65" id="AXY-Z5-4g8"/>
+                                                        <constraint firstAttribute="width" secondItem="Pb9-PV-9NK" secondAttribute="height" multiplier="1:1" id="Cfa-Vb-g91"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="pjm-FF-g7f" secondAttribute="bottom" id="3Dd-43-wua"/>
-                                                <constraint firstItem="pjm-FF-g7f" firstAttribute="top" secondItem="06H-n2-t3I" secondAttribute="top" id="SDI-41-N3M"/>
-                                                <constraint firstAttribute="trailing" secondItem="pjm-FF-g7f" secondAttribute="trailing" constant="25" id="ZfL-U8-pfN"/>
+                                                <constraint firstAttribute="bottom" secondItem="pjm-FF-g7f" secondAttribute="bottom" constant="10" id="3Dd-43-wua"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pb9-PV-9NK" secondAttribute="trailing" constant="20" id="OH9-Bp-Yfz"/>
+                                                <constraint firstItem="pjm-FF-g7f" firstAttribute="top" secondItem="06H-n2-t3I" secondAttribute="top" constant="5" id="SDI-41-N3M"/>
+                                                <constraint firstItem="Pb9-PV-9NK" firstAttribute="centerY" secondItem="06H-n2-t3I" secondAttribute="centerY" id="UvS-zm-09H"/>
+                                                <constraint firstItem="Pb9-PV-9NK" firstAttribute="leading" secondItem="pjm-FF-g7f" secondAttribute="trailing" constant="10" id="ZfL-U8-pfN"/>
                                                 <constraint firstItem="pjm-FF-g7f" firstAttribute="leading" secondItem="06H-n2-t3I" secondAttribute="leading" constant="25" id="gQa-nW-vDI"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -2023,17 +2037,19 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Location" width="50" height="50"/>
         <image name="Logo" width="180" height="101.33333587646484"/>
         <image name="Photo" width="291" height="330"/>
         <image name="ambulance_black" width="25" height="25"/>
         <image name="ambulance_white" width="25" height="25"/>
-        <image name="arrow.left" catalog="system" width="32" height="32"/>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="calendarBl" width="25" height="25"/>
         <image name="calendarWh" width="25" height="25"/>
         <image name="greaterthan" catalog="system" width="64" height="54"/>
         <image name="hotLine_white" width="25" height="25"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="icons8-google-maps-old" width="480" height="480"/>
         <image name="image1" width="266.66665649414062" height="133.33332824707031"/>
         <image name="list.bullet" catalog="system" width="64" height="44"/>
         <image name="location" catalog="system" width="64" height="56"/>
@@ -2044,6 +2060,7 @@
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
         <image name="person.crop.circle" catalog="system" width="64" height="60"/>
         <image name="phone.down.fill" catalog="system" width="64" height="26"/>
+        <image name="phone.fill" catalog="system" width="64" height="56"/>
         <image name="star" catalog="system" width="64" height="58"/>
         <image name="star.circle" catalog="system" width="64" height="60"/>
         <namedColor name="IconColor">
