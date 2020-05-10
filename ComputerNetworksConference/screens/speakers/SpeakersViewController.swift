@@ -40,9 +40,7 @@ class SpeakersViewController: UIViewController, UITableViewDelegate, UITableView
         modalBackground.alpha = 0.0
     }
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true
-            , completion: nil)
-
+        self.navigationController?.popViewController(animated: true)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1

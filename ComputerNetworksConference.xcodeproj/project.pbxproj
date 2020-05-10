@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B05734A2467F89E00497068 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0573492467F89E00497068 /* LocationViewController.swift */; };
 		5B12AD3B244CDA3900597F04 /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD3A244CDA3900597F04 /* SpeakersViewController.swift */; };
 		5B12AD3D244CDDAA00597F04 /* OrganizersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD3C244CDDA900597F04 /* OrganizersViewController.swift */; };
 		5B12AD3F244CDE9000597F04 /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD3E244CDE9000597F04 /* SponsorsViewController.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B0573492467F89E00497068 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		5B12AD3A244CDA3900597F04 /* SpeakersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
 		5B12AD3C244CDDA900597F04 /* OrganizersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizersViewController.swift; sourceTree = "<group>"; };
 		5B12AD3E244CDE9000597F04 /* SponsorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				5B12AD44244CDF2100597F04 /* LocationTabBarViewController.swift */,
+				5B0573492467F89E00497068 /* LocationViewController.swift */,
 			);
 			path = location;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				5B12AD43244CDEF500597F04 /* ContactViewController.swift in Sources */,
 				5B563539243F2E2F00915529 /* AgendaCell.swift in Sources */,
 				5B12AD41244CDEC100597F04 /* ConferenceRatingViewController.swift in Sources */,
+				5B05734A2467F89E00497068 /* LocationViewController.swift in Sources */,
 				5B9B9D322451A5A2008CF7AE /* SpeakersCell.swift in Sources */,
 				5B12AD3B244CDA3900597F04 /* SpeakersViewController.swift in Sources */,
 				5B4960FA2423F2750037D3B9 /* NewsViewController.swift in Sources */,

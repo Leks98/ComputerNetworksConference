@@ -14,7 +14,7 @@ class SponsorsViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     @IBOutlet weak var sponsorsTable: UITableView!
  

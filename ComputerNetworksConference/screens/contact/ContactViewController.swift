@@ -10,5 +10,10 @@ import Foundation
 import UIKit
 
 class ContactViewController: UIViewController {
-    
+  override func viewDidLoad(){
+        super.viewDidLoad()
+    }
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+          self.navigationController?.popViewController(animated: true)
+    }
 }
