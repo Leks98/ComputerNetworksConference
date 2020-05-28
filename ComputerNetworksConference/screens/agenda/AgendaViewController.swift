@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
     
@@ -21,7 +22,17 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var modalBackground: UIView!
     
     @IBOutlet weak var eventDetailsModal: UIView!
-    var tab = [[13432422, 17423324], [8,10,12]]
+    @IBOutlet weak var speaker: UILabel!
+    @IBOutlet weak var place: UILabel!
+    @IBOutlet weak var confDescription: UILabel!
+    
+    
+    //TODO
+    private var conferenceEntities: Results<ConferenceEntity> {
+        let conf = Realm.Configuration(schemaVersion: 1)
+        let realm = try! Realm(configuration: conf)
+        return realm.objects(ConferenceEntity.self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,11 +64,15 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         sideMenuTrailingConstraint.constant = 90 + screenWidth
         modalBackground.alpha = 0.0
     }
-    func showEventDetailsModal(){
+    //TODO SPEAKER
+    func showEventDetailsModal(withEntity entity: ConferenceEntity){
+        place.text = entity.address
+        confDescription.text = entity.confDescription
         modalBackground.alpha = 1.0
         UIView.animate(withDuration: 0.5, animations: {
             self.eventDetailsModal.alpha = 1.0
         })
+        
     }
     @objc func hideEventDetailsModal(){
         eventDetailsModal.alpha = 0.0
@@ -68,27 +83,25 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tab[section].count
+        return conferenceEntities.count
     }
     
-     func numberOfSections(in tableView: UITableView) -> Int {
-           return tab.count
-       }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
        
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           let cell = tableView.dequeueReusableCell(withIdentifier: "AgendaCell", for: indexPath)
-           if let agendaCell = cell as? AgendaCell {
-            agendaCell.eventName.text = "cell " + String(indexPath.row)
-            
-            agendaCell.eventTime.text = "cell " + String(indexPath.row)
-           }
-           return cell
-       }
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "AgendaCell", for: indexPath)
+    if let agendaCell = cell as? AgendaCell {
+        agendaCell.setCell(withEntity: conferenceEntities[indexPath.row])
+    }
+    return cell
+}
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AgendaHeaderCell")
         if let agendaHeaderCell = cell as? AgendaHeaderCell {
-            agendaHeaderCell.eventData.text = "1.02.2090"
+            agendaHeaderCell.eventData.text = "Date"
         }
        
         return cell
@@ -100,11 +113,11 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     @IBAction func sideMenuButttonPressed(_ sender: Any) {
-  showSideMenu()
+        showSideMenu()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showEventDetailsModal()
+        showEventDetailsModal(withEntity: conferenceEntities[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
     @IBAction func generalizedAgendaPressed(_ sender: Any) {

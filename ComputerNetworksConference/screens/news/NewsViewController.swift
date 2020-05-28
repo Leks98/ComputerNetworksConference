@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NewsViewController:
 UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -34,6 +35,21 @@ UIViewController, UITableViewDelegate, UITableViewDataSource {
         gestureRecognizer.addTarget(self, action: #selector(self.hidePhotoDetailModal))
         modalBackground.addGestureRecognizer(gestureRecognizer)
         modalBackground.isUserInteractionEnabled = true
+        
+        let conf = Realm.Configuration(schemaVersion: 1)
+        let realm = try! Realm(configuration: conf)
+        try! realm.write {
+            let ob3 = ConferenceEntity()
+            ob3.conferenceId = 15
+            ob3.country = "poland"
+            ob3.title = "Conference 2"
+            ob3.youtubeLink = "link"
+            ob3.startDate = Date()
+            ob3.endDate = Date()
+            ob3.confDescription = "Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT"
+            ob3.address = "Gliwice"
+            realm.add(ob3)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
