@@ -38,6 +38,7 @@ UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let conf = Realm.Configuration(schemaVersion: 1)
         let realm = try! Realm(configuration: conf)
+        print(Realm.Configuration.defaultConfiguration.fileURL)
         try! realm.write {
             let ob3 = ConferenceEntity()
             ob3.conferenceId = 15
