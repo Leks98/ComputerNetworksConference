@@ -28,10 +28,10 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     //TODO
-    private var conferenceEntities: Results<ConferenceEntity> {
+    private var presentationEntities: Results<PresentationsEntity> {
         let conf = Realm.Configuration(schemaVersion: 1)
         let realm = try! Realm(configuration: conf)
-        return realm.objects(ConferenceEntity.self)
+        return realm.objects(PresentationsEntity.self)
     }
     
     override func viewDidLoad() {
@@ -65,9 +65,9 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         modalBackground.alpha = 0.0
     }
     //TODO SPEAKER
-    func showEventDetailsModal(withEntity entity: ConferenceEntity){
-        place.text = entity.address
-        confDescription.text = entity.confDescription
+    func showEventDetailsModal(withEntity entity: PresentationsEntity){
+        place.text = entity.place
+        confDescription.text = entity.presentationDescription
         modalBackground.alpha = 1.0
         UIView.animate(withDuration: 0.5, animations: {
             self.eventDetailsModal.alpha = 1.0
@@ -83,7 +83,7 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return conferenceEntities.count
+        return presentationEntities.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -93,7 +93,7 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "AgendaCell", for: indexPath)
     if let agendaCell = cell as? AgendaCell {
-        agendaCell.setCell(withEntity: conferenceEntities[indexPath.row])
+        agendaCell.setCell(withEntity: presentationEntities[indexPath.row])
     }
     return cell
 }
@@ -117,7 +117,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showEventDetailsModal(withEntity: conferenceEntities[indexPath.row])
+        showEventDetailsModal(withEntity: presentationEntities[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
     @IBAction func generalizedAgendaPressed(_ sender: Any) {

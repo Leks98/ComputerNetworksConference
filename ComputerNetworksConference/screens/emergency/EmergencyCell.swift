@@ -10,5 +10,15 @@ import Foundation
 import UIKit
 
 class EmergencyCell: UITableViewCell{
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var number: UILabel!
+    @IBOutlet weak var address: UILabel!
     
+    func setCell(withEntity entity: Int) {
+        
+    }
+    
+    @IBAction func emergencyButtonPressed(_ sender: UIButton) {
+        //TODO call number
+    }
 }

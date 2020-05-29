@@ -39,18 +39,18 @@ UIViewController, UITableViewDelegate, UITableViewDataSource {
         let conf = Realm.Configuration(schemaVersion: 1)
         let realm = try! Realm(configuration: conf)
         print(Realm.Configuration.defaultConfiguration.fileURL)
-        try! realm.write {
-            let ob3 = ConferenceEntity()
-            ob3.conferenceId = 15
-            ob3.country = "poland"
-            ob3.title = "Conference 2"
-            ob3.youtubeLink = "link"
-            ob3.startDate = Date()
-            ob3.endDate = Date()
-            ob3.confDescription = "Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT Conference about new technology in IT"
-            ob3.address = "Gliwice"
-            realm.add(ob3)
-        }
+        /*try! realm.write {
+            let pres = PresentationsEntity()
+            pres.authors = "Mr Smith"
+            pres.date = Date()
+            pres.presentationDescription = ""
+            pres.endTime = "21:00"
+            pres.place = "Gliwice"
+            pres.startTime = "19:30"
+            pres.title = "Deep lerning in Python"
+            
+            realm.add(pres)
+        }*/
     }
     
     override func viewWillAppear(_ animated: Bool) {

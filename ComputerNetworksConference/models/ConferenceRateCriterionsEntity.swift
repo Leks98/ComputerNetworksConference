@@ -13,6 +13,6 @@ class ConferenceRateCriterionsEntity: Object {
     @objc dynamic var name : String?
     
     override static func primaryKey() -> String? {
-        return "confereneRateCriterionId"
+        return "conferenceRateCriterionId"
     }
 }

@@ -15,11 +15,8 @@ class AgendaCell: UITableViewCell {
     
     private let formatter = DateFormatter()
     
-    func setCell(withEntity entity: ConferenceEntity) {
+    func setCell(withEntity entity: PresentationsEntity) {
         eventName.text = entity.title
-        if let date = entity.startDate {
-            formatter.dateStyle = .medium
-            eventTime.text = formatter.string(from: date)
-        }
+        eventTime.text = entity.startTime
     }
 }
