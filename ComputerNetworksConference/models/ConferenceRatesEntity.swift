@@ -15,6 +15,12 @@ class ConferenceRatesEntity: Object {
     @objc dynamic var conferenceRaitingId : Int = 0
     @objc dynamic var conferenceRateCriterionId : Int = 0
     
+    convenience init(conferenceRateDescription : String?, value : Int){
+        self.init()
+        self.conferenceRateDescription = conferenceRateDescription
+        self.value = value
+    }
+    
     override static func primaryKey() -> String? {
         return "conferenceRateId"
     }

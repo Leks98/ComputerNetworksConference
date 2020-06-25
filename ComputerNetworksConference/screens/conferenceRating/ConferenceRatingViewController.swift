@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class ConferenceRatingViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
@@ -34,6 +35,7 @@ class ConferenceRatingViewController: UIViewController, UIPickerViewDataSource, 
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         return stars[row]
     }
     
@@ -52,5 +54,13 @@ class ConferenceRatingViewController: UIViewController, UIPickerViewDataSource, 
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func saveButtonPressed(_ sender: UIButton) {
+        
+        let entity = ConferenceRatesEntity(conferenceRateDescription: nil, value: 0)
+        
+        entity.value = StarPickerView.selectedRow(inComponent: 0)
+        
+        try! GlobalVariables.realm.write{
+            GlobalVariables.realm.add(entity)
+        }
     }
 }

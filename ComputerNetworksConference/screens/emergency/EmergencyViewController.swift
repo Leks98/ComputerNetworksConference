@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class EmergencyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var sideMenuLeadingConstraint: NSLayoutConstraint!
@@ -16,6 +17,18 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var emergencyTable: UITableView!
     let transition = SlideInTransition()
+    
+    @IBOutlet weak var name: UILabel!
+    
+    @IBOutlet weak var logo: UIImageView!
+    
+    @IBOutlet weak var number: UILabel!
+    //TODO
+    private var emergencyNumbersEntities: Results<EmergencyNumbersEntity> {
+        let conf = Realm.Configuration(schemaVersion: 1)
+        let realm = try! Realm(configuration: conf)
+        return realm.objects(EmergencyNumbersEntity.self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,14 +59,21 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
         modalBackground.alpha = 1.0
     }
     
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return emergencyNumbersEntities.count
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+      
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EmergencyCell", for: indexPath)
-        if let photoCell = cell as? EmergencyCell {
+        if let emergencyCell = cell as? EmergencyCell {
+            emergencyCell.setCell(withEntity: emergencyNumbersEntities[indexPath.row])
         }
+        
         return cell
     }
     @IBAction func sideMenuButtonPressed(_ sender: UIButton) {
@@ -69,4 +89,5 @@ class EmergencyViewController: UIViewController, UITableViewDelegate, UITableVie
         transition.isPresenting = false
         return transition
     }
+
 }

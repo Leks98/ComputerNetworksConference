@@ -11,4 +11,18 @@ import UIKit
 
 class ContactCell: UITableViewCell{
     
+    @IBOutlet weak var name: UILabel!
+    
+    @IBOutlet weak var university: UILabel!
+    
+    @IBOutlet weak var number: UILabel!
+    
+    @IBOutlet weak var email: UILabel!
+    
+    func setCell(withEntity entity: OrganizersEntity){
+        name.text = entity.name
+        university.text = entity.university
+        number.text = entity.number
+        email.text = entity.email
+    }
 }
