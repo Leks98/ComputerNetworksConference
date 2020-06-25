@@ -11,8 +11,7 @@ import UIKit
 class EmergencyCell: UITableViewCell{
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var number: UILabel!
-    @IBOutlet weak var address: UILabel!
-    
+   
     func setCell(withEntity entity: EmergencyNumbersEntity) {
         name.text = entity.name
         number.text = entity.number
