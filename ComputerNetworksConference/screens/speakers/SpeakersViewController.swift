@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class SpeakersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var speakersTable: UITableView!
@@ -15,6 +16,13 @@ class SpeakersViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var modalBackground: UIView!
     @IBOutlet weak var speakerDetailsModal: UIView!
     
+//    private var speakerPresentationEntities: Results<SpeakersPresentationsEntity> {
+//        return GlobalVariables.realm.objects(SpeakersPresentationsEntity.self).filter("conferenceId == %@", GlobalVariables.currentConferenceID)
+//    }
+    
+    private var speakerEntities: Results<SpeakersEntity> {
+        return GlobalVariables.realm.objects(SpeakersEntity.self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +51,13 @@ class SpeakersViewController: UIViewController, UITableViewDelegate, UITableView
         self.navigationController?.popViewController(animated: true)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return speakerEntities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpeakersCell", for: indexPath)
         if let speakersCell = cell as? SpeakersCell {
+            speakersCell.setCell(withEntity: speakerEntities[indexPath.row])
         }
         return cell
     }

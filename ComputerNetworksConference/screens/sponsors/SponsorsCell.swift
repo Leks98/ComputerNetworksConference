@@ -10,5 +10,8 @@ import Foundation
 import UIKit
 
 class SponsorsCell : UITableViewCell {
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
     
 }

@@ -16,7 +16,7 @@ class SpeakersCell : UITableViewCell {
     
     func setCell(withEntity entity: SpeakersEntity) {
         universityLabel.text = entity.name
-        if(universityLabel.text == nil) {
+        if(universityLabel.text != nil) {
             universityLabel.text! += " "
             universityLabel.text! += entity.surname ?? ""
         } else {

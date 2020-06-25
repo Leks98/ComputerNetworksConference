@@ -14,7 +14,8 @@ class EmergencyCell: UITableViewCell{
     @IBOutlet weak var address: UILabel!
     
     func setCell(withEntity entity: EmergencyNumbersEntity) {
-        
+        name.text = entity.name
+        number.text = entity.number
     }
     
     @IBAction func emergencyButtonPressed(_ sender: UIButton) {
