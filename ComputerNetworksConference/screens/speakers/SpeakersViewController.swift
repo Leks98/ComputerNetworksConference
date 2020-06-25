@@ -14,7 +14,7 @@ class SpeakersViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var modalBackground: UIView!
     @IBOutlet weak var speakerDetailsModal: UIView!
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

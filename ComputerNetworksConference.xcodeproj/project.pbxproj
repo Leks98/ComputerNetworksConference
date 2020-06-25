@@ -16,9 +16,20 @@
 		5B12AD41244CDEC100597F04 /* ConferenceRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD40244CDEC100597F04 /* ConferenceRatingViewController.swift */; };
 		5B12AD43244CDEF500597F04 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD42244CDEF500597F04 /* ContactViewController.swift */; };
 		5B12AD45244CDF2100597F04 /* LocationTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12AD44244CDF2100597F04 /* LocationTabBarViewController.swift */; };
+		5B2808522482537C00ED760E /* ConferenceRaitingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28084C2482537A00ED760E /* ConferenceRaitingEntity.swift */; };
+		5B2808532482537C00ED760E /* ConferenceMedicalPointInformationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28084D2482537A00ED760E /* ConferenceMedicalPointInformationEntity.swift */; };
+		5B2808542482537C00ED760E /* ConferenceAccommodationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28084E2482537B00ED760E /* ConferenceAccommodationEntity.swift */; };
+		5B2808552482537C00ED760E /* EmergencyNumbersEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28084F2482537B00ED760E /* EmergencyNumbersEntity.swift */; };
+		5B2808562482537C00ED760E /* ConferenceEmergencyNumbersEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2808502482537C00ED760E /* ConferenceEmergencyNumbersEntity.swift */; };
+		5B2808572482537C00ED760E /* ConferenceSponsorsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2808512482537C00ED760E /* ConferenceSponsorsEntity.swift */; };
+		5B28085C248253A100ED760E /* PresentationTypesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B280858248253A000ED760E /* PresentationTypesEntity.swift */; };
+		5B28085D248253A100ED760E /* SpeakersPresentationsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B280859248253A000ED760E /* SpeakersPresentationsEntity.swift */; };
+		5B28085E248253A100ED760E /* SpeakersPhotosEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28085A248253A000ED760E /* SpeakersPhotosEntity.swift */; };
+		5B28085F248253A100ED760E /* PresentationRaitingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28085B248253A100ED760E /* PresentationRaitingEntity.swift */; };
 		5B28995D246072E300F5898A /* ConferencePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28995C246072E200F5898A /* ConferencePlaceViewController.swift */; };
 		5B28995F2460738600F5898A /* ImportantPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28995E2460738600F5898A /* ImportantPlacesViewController.swift */; };
 		5B2899612460740800F5898A /* AccommodationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2899602460740800F5898A /* AccommodationViewController.swift */; };
+		5B4705E524A49AC200FB45EE /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4705E424A49AC200FB45EE /* GlobalVariables.swift */; };
 		5B4960F62423F2750037D3B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4960F52423F2750037D3B9 /* AppDelegate.swift */; };
 		5B4960F82423F2750037D3B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4960F72423F2750037D3B9 /* SceneDelegate.swift */; };
 		5B4960FA2423F2750037D3B9 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4960F92423F2750037D3B9 /* NewsViewController.swift */; };
@@ -86,9 +97,20 @@
 		5B12AD40244CDEC100597F04 /* ConferenceRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceRatingViewController.swift; sourceTree = "<group>"; };
 		5B12AD42244CDEF500597F04 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		5B12AD44244CDF2100597F04 /* LocationTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTabBarViewController.swift; sourceTree = "<group>"; };
+		5B28084C2482537A00ED760E /* ConferenceRaitingEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceRaitingEntity.swift; sourceTree = "<group>"; };
+		5B28084D2482537A00ED760E /* ConferenceMedicalPointInformationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceMedicalPointInformationEntity.swift; sourceTree = "<group>"; };
+		5B28084E2482537B00ED760E /* ConferenceAccommodationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceAccommodationEntity.swift; sourceTree = "<group>"; };
+		5B28084F2482537B00ED760E /* EmergencyNumbersEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyNumbersEntity.swift; sourceTree = "<group>"; };
+		5B2808502482537C00ED760E /* ConferenceEmergencyNumbersEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceEmergencyNumbersEntity.swift; sourceTree = "<group>"; };
+		5B2808512482537C00ED760E /* ConferenceSponsorsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConferenceSponsorsEntity.swift; sourceTree = "<group>"; };
+		5B280858248253A000ED760E /* PresentationTypesEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationTypesEntity.swift; sourceTree = "<group>"; };
+		5B280859248253A000ED760E /* SpeakersPresentationsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersPresentationsEntity.swift; sourceTree = "<group>"; };
+		5B28085A248253A000ED760E /* SpeakersPhotosEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersPhotosEntity.swift; sourceTree = "<group>"; };
+		5B28085B248253A100ED760E /* PresentationRaitingEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationRaitingEntity.swift; sourceTree = "<group>"; };
 		5B28995C246072E200F5898A /* ConferencePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferencePlaceViewController.swift; sourceTree = "<group>"; };
 		5B28995E2460738600F5898A /* ImportantPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantPlacesViewController.swift; sourceTree = "<group>"; };
 		5B2899602460740800F5898A /* AccommodationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationViewController.swift; sourceTree = "<group>"; };
+		5B4705E424A49AC200FB45EE /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		5B4960F22423F2750037D3B9 /* ComputerNetworksConference.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComputerNetworksConference.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4960F52423F2750037D3B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B4960F72423F2750037D3B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -327,6 +349,16 @@
 		5B4C9ED02480362300E86F73 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				5B28085B248253A100ED760E /* PresentationRaitingEntity.swift */,
+				5B280858248253A000ED760E /* PresentationTypesEntity.swift */,
+				5B28085A248253A000ED760E /* SpeakersPhotosEntity.swift */,
+				5B280859248253A000ED760E /* SpeakersPresentationsEntity.swift */,
+				5B28084E2482537B00ED760E /* ConferenceAccommodationEntity.swift */,
+				5B2808502482537C00ED760E /* ConferenceEmergencyNumbersEntity.swift */,
+				5B28084D2482537A00ED760E /* ConferenceMedicalPointInformationEntity.swift */,
+				5B28084C2482537A00ED760E /* ConferenceRaitingEntity.swift */,
+				5B2808512482537C00ED760E /* ConferenceSponsorsEntity.swift */,
+				5B28084F2482537B00ED760E /* EmergencyNumbersEntity.swift */,
 				5BF1EBD02481358E00D5C2D6 /* AccomodationsEntity.swift */,
 				5BF1EBD2248135B900D5C2D6 /* BuildingsPlansEntity.swift */,
 				5B4C9ED1248036A600E86F73 /* ConferenceEntity.swift */,
@@ -341,6 +373,7 @@
 				5BF1EBDE2481366800D5C2D6 /* SponsorsEntity.swift */,
 				5BF1EBE02481367D00D5C2D6 /* UsersEntity.swift */,
 				5BF1EBE224813BB300D5C2D6 /* UsersTypesEntity.swift */,
+				5B4705E424A49AC200FB45EE /* GlobalVariables.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -594,6 +627,7 @@
 				5B12AD43244CDEF500597F04 /* ContactViewController.swift in Sources */,
 				5BF1EBD72481360500D5C2D6 /* MedicalPointsEntity.swift in Sources */,
 				5BF1EBE324813BB300D5C2D6 /* UsersTypesEntity.swift in Sources */,
+				5B2808572482537C00ED760E /* ConferenceSponsorsEntity.swift in Sources */,
 				5B563539243F2E2F00915529 /* AgendaCell.swift in Sources */,
 				5B12AD41244CDEC100597F04 /* ConferenceRatingViewController.swift in Sources */,
 				5B05734A2467F89E00497068 /* LocationViewController.swift in Sources */,
@@ -604,16 +638,23 @@
 				5B05734E246874AE00497068 /* ContactCell.swift in Sources */,
 				5B2899612460740800F5898A /* AccommodationViewController.swift in Sources */,
 				5B05734C246831A300497068 /* AccommodationCell.swift in Sources */,
+				5B2808562482537C00ED760E /* ConferenceEmergencyNumbersEntity.swift in Sources */,
 				5BF1EBD3248135B900D5C2D6 /* BuildingsPlansEntity.swift in Sources */,
 				5B12AD3F244CDE9000597F04 /* SponsorsViewController.swift in Sources */,
+				5B28085E248253A100ED760E /* SpeakersPhotosEntity.swift in Sources */,
 				5B28995D246072E300F5898A /* ConferencePlaceViewController.swift in Sources */,
 				5B28995F2460738600F5898A /* ImportantPlacesViewController.swift in Sources */,
 				5BC0E878243DC178004F792C /* AgendaViewController.swift in Sources */,
 				5BF1EBE12481367D00D5C2D6 /* UsersEntity.swift in Sources */,
 				5B70330E244C502D0040FC2A /* BuildingViewController.swift in Sources */,
 				5B56353B243F8AD900915529 /* AgendaHeaderCell.swift in Sources */,
+				5B2808542482537C00ED760E /* ConferenceAccommodationEntity.swift in Sources */,
+				5B28085F248253A100ED760E /* PresentationRaitingEntity.swift in Sources */,
+				5B4705E524A49AC200FB45EE /* GlobalVariables.swift in Sources */,
 				5BF1EBD92481361D00D5C2D6 /* PresentationsEntity.swift in Sources */,
+				5B28085D248253A100ED760E /* SpeakersPresentationsEntity.swift in Sources */,
 				5BF1EBD12481358E00D5C2D6 /* AccomodationsEntity.swift in Sources */,
+				5B28085C248253A100ED760E /* PresentationTypesEntity.swift in Sources */,
 				5B4960F62423F2750037D3B9 /* AppDelegate.swift in Sources */,
 				5BC1A78C244A2FCA00FE96CF /* SideMenuModalDelegate.swift in Sources */,
 				5BF1EBDD2481364F00D5C2D6 /* SpeakersEntity.swift in Sources */,
@@ -625,11 +666,14 @@
 				5BF1EBE924814E8900D5C2D6 /* PresentationRateCriterionsEntity.swift in Sources */,
 				5BF1EBF524815AF500D5C2D6 /* ConferenceRatesEntity.swift in Sources */,
 				5B12AD3D244CDDAA00597F04 /* OrganizersViewController.swift in Sources */,
+				5B2808552482537C00ED760E /* EmergencyNumbersEntity.swift in Sources */,
 				5B84254024460160000EE795 /* EmergencyCell.swift in Sources */,
 				5BF1EBEB24814F0200D5C2D6 /* PresentationRatesEntity.swift in Sources */,
 				5B4960F82423F2750037D3B9 /* SceneDelegate.swift in Sources */,
+				5B2808532482537C00ED760E /* ConferenceMedicalPointInformationEntity.swift in Sources */,
 				5BF1EBDF2481366800D5C2D6 /* SponsorsEntity.swift in Sources */,
 				5B84253E2445FF90000EE795 /* EmergencyViewController.swift in Sources */,
+				5B2808522482537C00ED760E /* ConferenceRaitingEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

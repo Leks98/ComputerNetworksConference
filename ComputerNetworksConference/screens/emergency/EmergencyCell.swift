@@ -6,7 +6,6 @@
 //  Copyright © 2020 OtherCoders. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class EmergencyCell: UITableViewCell{
@@ -14,7 +13,7 @@ class EmergencyCell: UITableViewCell{
     @IBOutlet weak var number: UILabel!
     @IBOutlet weak var address: UILabel!
     
-    func setCell(withEntity entity: Int) {
+    func setCell(withEntity entity: EmergencyNumbersEntity) {
         
     }
     

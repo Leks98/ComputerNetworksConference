@@ -13,7 +13,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="iaq-Sr-FRr" customClass="SpeakersViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IpX-sq-qsU">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="714"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="631"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5V-kf-vVK" userLabel="TopBar">
@@ -59,7 +59,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-4d-3Td" userLabel="Speakers Table">
-                                <rect key="frame" x="0.0" y="106" width="324" height="608"/>
+                                <rect key="frame" x="0.0" y="106" width="324" height="525"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpeakersCell" rowHeight="103" id="kRL-kf-TFE" customClass="SpeakersCell" customModule="ComputerNetworksConference" customModuleProvider="target">
@@ -118,6 +118,11 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="xJZ-HE-Bll" secondAttribute="trailing" constant="20" id="zyw-74-R5S"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="logoImage" destination="I1f-Rx-aI3" id="WpB-iV-ChO"/>
+                                            <outlet property="personalInfoLabel" destination="xJZ-HE-Bll" id="GOp-ZP-kkN"/>
+                                            <outlet property="universityLabel" destination="Pzl-xN-eWl" id="yc1-5i-59X"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -125,13 +130,13 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Q2-lb-rAO" userLabel="ModalBackground">
-                                <rect key="frame" x="0.0" y="0.0" width="324" height="714"/>
+                                <rect key="frame" x="0.0" y="0.0" width="324" height="631"/>
                                 <color key="backgroundColor" name="ModalBackground"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cg3-rV-Llb" userLabel="SpeakerDetails">
-                                <rect key="frame" x="54.5" y="313.5" width="215" height="131"/>
+                                <rect key="frame" x="54.5" y="272" width="215" height="131"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="QN8-YS-171" userLabel="Photo">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Silesian University of Technology" translatesAutoresizingMaskIntoConstraints="NO" id="QN8-YS-171" userLabel="Photo">
                                         <rect key="frame" x="10" y="25.5" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="QN8-YS-171" secondAttribute="height" multiplier="1:1" id="XUj-FY-GhO"/>
@@ -230,7 +235,7 @@
             <objects>
                 <tableViewController id="Fge-h9-QR9" customClass="ButtonTableViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bEF-0m-tlF">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="714"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="631"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>
@@ -459,11 +464,11 @@
             <objects>
                 <viewController storyboardIdentifier="SideMenuViewController" id="gJk-HK-3jF" customClass="SideMenuViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tol-Cx-F25">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAc-Qf-ICl" userLabel="Modal">
-                                <rect key="frame" x="0.0" y="0.0" width="324" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="324" height="813"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1k-C2-ufb" userLabel="TopBar">
                                         <rect key="frame" x="0.0" y="0.0" width="324" height="40"/>
@@ -479,7 +484,7 @@
                                         </constraints>
                                     </imageView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLJ-0H-wGx">
-                                        <rect key="frame" x="0.0" y="182" width="324" height="714"/>
+                                        <rect key="frame" x="0.0" y="182" width="324" height="631"/>
                                         <connections>
                                             <segue destination="Fge-h9-QR9" kind="embed" id="8zN-Aj-8FX"/>
                                         </connections>
@@ -1374,7 +1379,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="HvY-73-bFH" customClass="OrganizersViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nM0-Em-iQs">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="714"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="631"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFV-5h-63E" userLabel="TopBar">
@@ -1440,7 +1445,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="9HU-yY-bH7" customClass="LocationViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ls7-8E-njk">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="714"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="631"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7n-vA-T3f" userLabel="TopBar">
@@ -1482,7 +1487,7 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EaL-yg-HAx">
-                                <rect key="frame" x="0.0" y="106" width="324" height="608"/>
+                                <rect key="frame" x="0.0" y="106" width="324" height="525"/>
                                 <connections>
                                     <segue destination="zX4-DP-xMl" kind="embed" id="mna-Qr-oak"/>
                                 </connections>
@@ -1514,7 +1519,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="w6M-Qw-kg3" customClass="ContactViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="btt-Hz-tb9">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="714"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="631"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYX-ti-oEC" userLabel="TopBar">
@@ -1558,7 +1563,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y3k-Og-115" userLabel="Contact Table">
-                                <rect key="frame" x="0.0" y="106" width="324" height="608"/>
+                                <rect key="frame" x="0.0" y="106" width="324" height="525"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="183" id="Sdj-bp-Fkj" userLabel="Contact Cell" customClass="ContactCell" customModule="ComputerNetworksConference" customModuleProvider="target">
@@ -1677,7 +1682,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="Qdj-er-M7F" customClass="ConferenceRatingViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LJK-l5-vYv">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="714"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="631"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dai-rv-kV7" userLabel="TopBar">
@@ -1721,10 +1726,10 @@
                                 </constraints>
                             </view>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQa-Wc-8Ly">
-                                <rect key="frame" x="0.0" y="271" width="324" height="216"/>
+                                <rect key="frame" x="0.0" y="229.5" width="324" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwJ-P2-b6Y" userLabel="Save Button">
-                                <rect key="frame" x="117" y="624" width="90" height="40"/>
+                                <rect key="frame" x="117" y="541" width="90" height="40"/>
                                 <color key="backgroundColor" name="IconColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tJu-cc-vUo"/>
@@ -1770,7 +1775,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="Mxk-pk-JFk" customClass="SponsorsViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4e5-Sr-qzx">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="714"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="631"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9E-Qx-S6E" userLabel="TopBar">
@@ -1814,7 +1819,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cF0-HU-Lt3" userLabel="Sponsors Table">
-                                <rect key="frame" x="0.0" y="106" width="324" height="608"/>
+                                <rect key="frame" x="0.0" y="106" width="324" height="525"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SponsorsCell" rowHeight="103" id="Rz7-3u-Udi" customClass="SponsorsCell" customModule="ComputerNetworksConference" customModuleProvider="target">
@@ -1908,7 +1913,7 @@
             <objects>
                 <viewController storyboardIdentifier="ImportantPlacesViewController" id="jee-fs-MyO" customClass="ConferencePlaceViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iJb-QO-36C">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="608"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="525"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lST-eJ-tt3" userLabel="Tab Bar Background">
@@ -1918,40 +1923,40 @@
                                     <constraint firstAttribute="height" constant="50" id="k6Z-2O-1CZ"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Silesian University of Technology" translatesAutoresizingMaskIntoConstraints="NO" id="Ihp-cH-BfK" userLabel="Photo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Silesian University of Technology" translatesAutoresizingMaskIntoConstraints="NO" id="Ihp-cH-BfK" userLabel="Photo">
                                 <rect key="frame" x="0.0" y="50" width="324" height="183"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgD-Da-15Y" userLabel="Top Bar">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HgD-Da-15Y" userLabel="Top Bar">
                                 <rect key="frame" x="0.0" y="243" width="324" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="rlf-Xn-B35"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conference Name conference name conference name conference name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fs-7Q-d1W">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Conference Name conference name conference name conference name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fs-7Q-d1W">
                                 <rect key="frame" x="5" y="249" width="314" height="75.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conference Subname conference subname conference subname conference subname conference subname" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMb-7y-mNB" userLabel="Conference Subname">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Conference Subname conference subname conference subname conference subname conference subname" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMb-7y-mNB" userLabel="Conference Subname">
                                 <rect key="frame" x="5" y="324.5" width="314" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1I-bF-MQb" userLabel="Bottom Bar">
-                                <rect key="frame" x="0.0" y="383.5" width="324" height="1"/>
+                                <rect key="frame" x="0.0" y="499" width="324" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="02K-ar-nwF"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIJ-HZ-k9y" userLabel="Description">
-                                <rect key="frame" x="10" y="389.5" width="304" height="198.5"/>
+                                <rect key="frame" x="10" y="505" width="304" height="0.0"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-rd-IcL">
-                                        <rect key="frame" x="0.0" y="0.0" width="304" height="198.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="0.0"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghl-gB-Xyc" userLabel="Text Label">
                                                 <rect key="frame" x="5" y="0.0" width="304" height="418"/>
@@ -2013,14 +2018,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtz-tl-evF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2466.666666666667" y="2595.5357142857142"/>
+            <point key="canvasLocation" x="3288" y="2051"/>
         </scene>
         <!--ACCOMMODATION-->
         <scene sceneID="Ade-Sz-Clc">
             <objects>
                 <viewController storyboardIdentifier="AccommodationViewController" id="NYp-8r-Lb2" customClass="AccommodationViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZVv-Vz-fpm">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="608"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="525"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ar6-od-FQN" userLabel="Tab Bar Background">
@@ -2031,18 +2036,18 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J7o-8f-2PA" userLabel="Accommodation Table">
-                                <rect key="frame" x="0.0" y="50" width="324" height="558"/>
+                                <rect key="frame" x="0.0" y="50" width="324" height="475"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AccommodationCell" id="MU0-Bn-kaS" userLabel="Accommodation Cell" customClass="AccommodationCell" customModule="ComputerNetworksConference" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="324" height="146"/>
+                                        <rect key="frame" x="0.0" y="28" width="324" height="195.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MU0-Bn-kaS" id="dh7-GS-m5T">
-                                            <rect key="frame" x="0.0" y="0.0" width="324" height="146"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="324" height="195.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wnr-fB-EXM">
-                                                    <rect key="frame" x="25" y="5" width="204" height="131"/>
+                                                    <rect key="frame" x="25" y="5" width="204" height="180.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVY-3i-S4m" userLabel="Name">
                                                             <rect key="frame" x="0.0" y="0.0" width="204" height="30.5"/>
@@ -2051,10 +2056,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlV-Xb-ltN" userLabel="Address Stack View">
-                                                            <rect key="frame" x="0.0" y="40.5" width="204" height="50.5"/>
+                                                            <rect key="frame" x="0.0" y="40.5" width="204" height="100"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location" translatesAutoresizingMaskIntoConstraints="NO" id="uSi-2h-rSt" userLabel="Address Icon">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="50.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="100"/>
                                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="f8N-gB-Oy3"/>
@@ -2062,7 +2067,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgA-45-WC1" userLabel="Address">
-                                                                    <rect key="frame" x="35" y="0.0" width="169" height="50.5"/>
+                                                                    <rect key="frame" x="35" y="0.0" width="169" height="100"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -2070,7 +2075,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zph-pb-sMn" userLabel="Number Stack View">
-                                                            <rect key="frame" x="0.0" y="101" width="204" height="30"/>
+                                                            <rect key="frame" x="0.0" y="150.5" width="204" height="30"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7SA-LT-aW2" userLabel="Address Icon">
                                                                     <rect key="frame" x="0.0" y="1.5" width="25" height="27.5"/>
@@ -2091,7 +2096,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-google-maps-old" translatesAutoresizingMaskIntoConstraints="NO" id="byz-eK-umt">
-                                                    <rect key="frame" x="239" y="40.5" width="65" height="65"/>
+                                                    <rect key="frame" x="239" y="65.5" width="65" height="65"/>
                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="byz-eK-umt" secondAttribute="height" multiplier="1:1" id="Ihq-zc-9zz"/>
@@ -2132,7 +2137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adB-Nb-H8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="2596"/>
+            <point key="canvasLocation" x="1910" y="2052"/>
         </scene>
         <!--Location Tab Bar View Controller-->
         <scene sceneID="DGf-3O-Scf">
@@ -2153,29 +2158,29 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E2E-rQ-kl5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1749" y="2051"/>
+            <point key="canvasLocation" x="2575" y="1561"/>
         </scene>
         <!--IMPORTANT PLACES-->
         <scene sceneID="ifK-Cd-ElV">
             <objects>
                 <viewController storyboardIdentifier="ConferencePlaceViewController" id="Dho-iv-GTw" customClass="ImportantPlacesViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wyw-jp-lIK">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="608"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="525"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wiU-sb-J0e">
-                                <rect key="frame" x="0.0" y="50" width="324" height="558"/>
+                                <rect key="frame" x="0.0" y="50" width="324" height="475"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImportantPlacesCell" id="5sr-br-pgm" customClass="ImportantPlacesCell" customModule="ComputerNetworksConference" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="324" height="146"/>
+                                        <rect key="frame" x="0.0" y="28" width="324" height="195.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5sr-br-pgm" id="06H-n2-t3I">
-                                            <rect key="frame" x="0.0" y="0.0" width="324" height="146"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="324" height="195.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pjm-FF-g7f">
-                                                    <rect key="frame" x="25" y="5" width="204" height="131"/>
+                                                    <rect key="frame" x="25" y="5" width="204" height="180.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pharmacy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOp-LJ-XUu" userLabel="Name">
                                                             <rect key="frame" x="0.0" y="0.0" width="204" height="30.5"/>
@@ -2184,10 +2189,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-T0-uFZ" userLabel="Address Stack View">
-                                                            <rect key="frame" x="0.0" y="40.5" width="204" height="50.5"/>
+                                                            <rect key="frame" x="0.0" y="40.5" width="204" height="100"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location" translatesAutoresizingMaskIntoConstraints="NO" id="RYa-ZH-0eg" userLabel="Address Icon">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="50.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="100"/>
                                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="25" id="M9T-82-yGF"/>
@@ -2195,7 +2200,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idf-Cl-YaQ" userLabel="Address">
-                                                                    <rect key="frame" x="35" y="0.0" width="169" height="50.5"/>
+                                                                    <rect key="frame" x="35" y="0.0" width="169" height="100"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -2203,7 +2208,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WOf-c0-GtI" userLabel="Number Stack View">
-                                                            <rect key="frame" x="0.0" y="101" width="204" height="30"/>
+                                                            <rect key="frame" x="0.0" y="150.5" width="204" height="30"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gew-zY-6Y3" userLabel="Address Icon">
                                                                     <rect key="frame" x="0.0" y="1.5" width="25" height="27.5"/>
@@ -2224,7 +2229,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-google-maps-old" translatesAutoresizingMaskIntoConstraints="NO" id="Pb9-PV-9NK">
-                                                    <rect key="frame" x="239" y="40.5" width="65" height="65"/>
+                                                    <rect key="frame" x="239" y="65.5" width="65" height="65"/>
                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="65" id="AXY-Z5-4g8"/>
@@ -2272,13 +2277,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1CM-Eq-kSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1753.6231884057972" y="2595.5357142857142"/>
+            <point key="canvasLocation" x="2575" y="2051"/>
         </scene>
     </scenes>
     <resources>
         <image name="Location" width="50" height="50"/>
         <image name="Logo" width="180" height="101.33333587646484"/>
-        <image name="Photo" width="291" height="330"/>
         <image name="Silesian University of Technology" width="275" height="183"/>
         <image name="ambulance_black" width="25" height="25"/>
         <image name="ambulance_white" width="25" height="25"/>
@@ -2316,6 +2320,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dNC-Wn-P2u"/>
+        <segue reference="IBH-yo-YGq"/>
     </inferredMetricsTieBreakers>
 </document>

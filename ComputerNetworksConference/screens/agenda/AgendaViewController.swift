@@ -26,7 +26,6 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var place: UILabel!
     @IBOutlet weak var confDescription: UILabel!
     
-    
     //TODO
     private var presentationEntities: Results<PresentationsEntity> {
         let conf = Realm.Configuration(schemaVersion: 1)
