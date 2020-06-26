@@ -49,6 +49,7 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         hideSideMenu()
         hideEventDetailsModal()
+        agendaTable.reloadData()
     }
     func showSideMenu(){
         sideMenuLeadingConstraint.constant = 0

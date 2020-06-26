@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8BF3DCED-AD8B-42AE-ADD8-573F7CA4F4ED"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DFDA178C-23A5-4533-820C-9E3ADD0F0CD9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComputerNetworksConference/models/GlobalVariables.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "currentConferenceID"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A7F5834-8BFB-4492-A60F-D4E772C638CB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComputerNetworksConference/screens/speakers/SpeakersCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "setCell(withEntity:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A610AC76-1631-4EB7-8CF2-F4A744A9D1FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComputerNetworksConference/screens/speakers/SpeakersCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "setCell(withEntity:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E5A9470-BB0D-4553-9B36-ED2DD34E5784"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComputerNetworksConference/screens/sponsors/SponsorsCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "SponsorsCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4E5A9470-BB0D-4553-9B36-ED2DD34E5784 - e2086ab5a7558b9b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ComputerNetworksConference.SponsorsCell.websiteLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "ComputerNetworksConference"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vagrant/Documents/ComputerNetworksConference/ComputerNetworksConference/screens/sponsors/SponsorsCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "4E5A9470-BB0D-4553-9B36-ED2DD34E5784 - 5a894c0ea74f6f8f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ComputerNetworksConference.SponsorsCell.websiteLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "ComputerNetworksConference"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vagrant/Documents/ComputerNetworksConference/ComputerNetworksConference/screens/sponsors/SponsorsCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "4E5A9470-BB0D-4553-9B36-ED2DD34E5784 - 7488212c3493529e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ComputerNetworksConference.SponsorsCell.websiteLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "ComputerNetworksConference"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vagrant/Documents/ComputerNetworksConference/ComputerNetworksConference/screens/sponsors/SponsorsCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "4E5A9470-BB0D-4553-9B36-ED2DD34E5784 - b9da952c745cf529"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ComputerNetworksConference.SponsorsCell.websiteLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "ComputerNetworksConference"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vagrant/Documents/ComputerNetworksConference/ComputerNetworksConference/screens/sponsors/SponsorsCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "4E5A9470-BB0D-4553-9B36-ED2DD34E5784 - 4ab501d472453baa"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ComputerNetworksConference.SponsorsCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; ComputerNetworksConference.SponsorsCell"
+                  moduleName = "ComputerNetworksConference"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vagrant/Documents/ComputerNetworksConference/ComputerNetworksConference/screens/sponsors/SponsorsCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "375">
+               </Location>
+               <Location
+                  uuid = "4E5A9470-BB0D-4553-9B36-ED2DD34E5784 - 33cdef1e7fbe11b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ComputerNetworksConference.SponsorsCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ComputerNetworksConference.SponsorsCell&gt;"
+                  moduleName = "ComputerNetworksConference"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vagrant/Documents/ComputerNetworksConference/ComputerNetworksConference/screens/sponsors/SponsorsCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "301">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FE9DD2E-5945-4BC4-86E4-E4A7F1FBF006"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComputerNetworksConference/screens/agenda/AgendaViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "presentationEntities"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30D975E6-D494-4D01-BD03-64CB0B0166E9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComputerNetworksConference/screens/speakers/SpeakersCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "setCell(withEntity:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B23B4E4-C34C-4935-81DC-A4EBDC3FA9E9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ComputerNetworksConference/screens/sponsors/SponsorsCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "setCell(withEntity:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

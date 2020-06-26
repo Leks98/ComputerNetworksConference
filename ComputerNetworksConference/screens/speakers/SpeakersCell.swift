@@ -15,12 +15,12 @@ class SpeakersCell : UITableViewCell {
     @IBOutlet weak var logoImage: UIImageView!
     
     func setCell(withEntity entity: SpeakersEntity) {
-        universityLabel.text = entity.name
-        if(universityLabel.text != nil) {
-            universityLabel.text! += " "
-            universityLabel.text! += entity.surname ?? ""
+        personalInfoLabel.text = entity.name
+        if(personalInfoLabel.text != nil) {
+            personalInfoLabel.text! += " "
+            personalInfoLabel.text! += entity.surname ?? ""
         } else {
-            universityLabel.text = entity.surname
+            personalInfoLabel.text = entity.surname
         }
         universityLabel.text = entity.company
     }

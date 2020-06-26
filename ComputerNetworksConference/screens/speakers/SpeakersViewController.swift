@@ -15,6 +15,11 @@ class SpeakersViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var modalBackground: UIView!
     @IBOutlet weak var speakerDetailsModal: UIView!
+    @IBOutlet weak var PhotoImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var universityLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     
 //    private var speakerPresentationEntities: Results<SpeakersPresentationsEntity> {
 //        return GlobalVariables.realm.objects(SpeakersPresentationsEntity.self).filter("conferenceId == %@", GlobalVariables.currentConferenceID)
@@ -62,7 +67,21 @@ class SpeakersViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        setModal(withEntity: speakerEntities[indexPath.row])
         showSpeakerDetailsModal()
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func setModal(withEntity entity: SpeakersEntity) {
+        nameLabel.text = entity.name
+        if(nameLabel.text != nil) {
+            nameLabel.text! += " "
+            nameLabel.text! += entity.surname ?? ""
+        } else {
+            nameLabel.text = entity.surname
+        }
+        universityLabel.text = entity.company
+        //emailLabel.text = entity.
+
     }
 }
