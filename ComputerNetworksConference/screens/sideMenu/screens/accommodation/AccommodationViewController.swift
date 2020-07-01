@@ -7,19 +7,25 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AccommodationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var accommodationTableView: UITableView!
     
+    private var accomodationEntites: Results<AccommodationsEntity> {
+        return GlobalVariables.realm.objects(AccommodationsEntity.self)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return accomodationEntites.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AccommodationCell", for: indexPath)
           if let accommodationCell = cell as? AccommodationCell {
+            accommodationCell.setCell(withEntity: accomodationEntites[indexPath.row])
           }
           return cell
                

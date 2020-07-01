@@ -3,7 +3,7 @@
 //  ComputerNetworksConference
 //
 //  Created by vagrant on 19/03/2020.
-//  Copyright © 2020 OtherCoders. All rights reserved.
+//  Copyright ©  2020 OtherCoders. All rights reserved.
 //
 
 import UIKit

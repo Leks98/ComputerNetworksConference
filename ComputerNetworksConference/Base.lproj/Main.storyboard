@@ -276,9 +276,6 @@
                                                 <constraint firstItem="bDT-ZM-Sev" firstAttribute="centerY" secondItem="m8o-3Y-YGj" secondAttribute="centerY" id="d5L-u6-Xyk"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="HvY-73-bFH" kind="show" id="EiT-el-v0T"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="O6r-h1-Mj0" userLabel="SpeakersButton">
                                         <rect key="frame" x="0.0" y="71.5" width="324" height="43.5"/>
@@ -1382,18 +1379,18 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="HvY-73-bFH" customClass="OrganizersViewController" customModule="ComputerNetworksConference" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nM0-Em-iQs">
-                        <rect key="frame" x="0.0" y="0.0" width="324" height="714"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFV-5h-63E" userLabel="TopBar">
-                                <rect key="frame" x="0.0" y="0.0" width="324" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="u7j-vb-pfh"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PpV-oK-DHs" userLabel="Header">
-                                <rect key="frame" x="0.0" y="40" width="324" height="66"/>
+                                <rect key="frame" x="0.0" y="40" width="414" height="66"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFm-74-KQR" userLabel="BackButton">
                                         <rect key="frame" x="10" y="13" width="40" height="40"/>
@@ -1410,7 +1407,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organisers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klY-dF-clf">
-                                        <rect key="frame" x="120" y="22.5" width="84" height="21"/>
+                                        <rect key="frame" x="165" y="22.5" width="84" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1934,39 +1931,39 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Silesian University of Technology" translatesAutoresizingMaskIntoConstraints="NO" id="Ihp-cH-BfK" userLabel="Photo">
-                                <rect key="frame" x="0.0" y="50" width="324" height="183"/>
+                                <rect key="frame" x="0.0" y="50" width="324" height="366"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgD-Da-15Y" userLabel="Top Bar">
-                                <rect key="frame" x="0.0" y="243" width="324" height="1"/>
+                                <rect key="frame" x="0.0" y="426" width="324" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="rlf-Xn-B35"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conference Name conference name conference name conference name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fs-7Q-d1W">
-                                <rect key="frame" x="5" y="249" width="314" height="75.5"/>
+                                <rect key="frame" x="5" y="432" width="314" height="75.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conference Subname conference subname conference subname conference subname conference subname" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMb-7y-mNB" userLabel="Conference Subname">
-                                <rect key="frame" x="5" y="324.5" width="314" height="54"/>
+                                <rect key="frame" x="5" y="507.5" width="314" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1I-bF-MQb" userLabel="Bottom Bar">
-                                <rect key="frame" x="0.0" y="383.5" width="324" height="1"/>
+                                <rect key="frame" x="0.0" y="566.5" width="324" height="1"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="02K-ar-nwF"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIJ-HZ-k9y" userLabel="Description">
-                                <rect key="frame" x="10" y="389.5" width="304" height="198.5"/>
+                                <rect key="frame" x="10" y="572.5" width="304" height="15.5"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-rd-IcL">
-                                        <rect key="frame" x="0.0" y="0.0" width="304" height="198.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="15.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghl-gB-Xyc" userLabel="Text Label">
                                                 <rect key="frame" x="5" y="0.0" width="304" height="418"/>
@@ -2059,7 +2056,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wnr-fB-EXM">
                                                     <rect key="frame" x="25" y="5" width="204" height="131"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVY-3i-S4m" userLabel="Name">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVY-3i-S4m" userLabel="Name">
                                                             <rect key="frame" x="0.0" y="0.0" width="204" height="30.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                             <nil key="textColor"/>
@@ -2123,6 +2120,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="wnr-fB-EXM" secondAttribute="bottom" constant="10" id="sbb-Kf-EKU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="qgA-45-WC1" id="89L-N4-f3P"/>
+                                            <outlet property="nameLabel" destination="NVY-3i-S4m" id="aIq-cL-S0G"/>
+                                            <outlet property="numberLabel" destination="PNw-fQ-eVg" id="HY3-fp-Exl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -2220,7 +2222,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WOf-c0-GtI" userLabel="Number Stack View">
                                                             <rect key="frame" x="0.0" y="101" width="204" height="30"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gew-zY-6Y3" userLabel="Address Icon">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gew-zY-6Y3" userLabel="Number Icon">
                                                                     <rect key="frame" x="0.0" y="1.5" width="25" height="27.5"/>
                                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <constraints>
@@ -2256,6 +2258,11 @@
                                                 <constraint firstItem="pjm-FF-g7f" firstAttribute="leading" secondItem="06H-n2-t3I" secondAttribute="leading" constant="25" id="gQa-nW-vDI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="Idf-Cl-YaQ" id="Mek-fT-IJo"/>
+                                            <outlet property="nameLabel" destination="VOp-LJ-XUu" id="O5Y-9b-72j"/>
+                                            <outlet property="numberLabel" destination="c5d-jT-94f" id="gd7-zw-fDa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

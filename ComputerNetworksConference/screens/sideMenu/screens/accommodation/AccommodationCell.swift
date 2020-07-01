@@ -11,4 +11,13 @@ import UIKit
 
 class AccommodationCell: UITableViewCell{
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    
+    func setCell(withEntity entity: AccommodationsEntity) {
+        nameLabel.text = entity.name
+        addressLabel.text = entity.address
+        numberLabel.text = entity.number
+    }
 }
