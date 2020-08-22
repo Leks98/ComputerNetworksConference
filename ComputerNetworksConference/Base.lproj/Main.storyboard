@@ -542,8 +542,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atb-tw-EbO" userLabel="Header">
                                 <rect key="frame" x="0.0" y="40" width="414" height="66"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f5-Iu-YKF">
-                                        <rect key="frame" x="186" y="21" width="42" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f5-Iu-YKF">
+                                        <rect key="frame" x="180.5" y="21" width="53" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -782,8 +782,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yrp-OS-oaq" userLabel="Header">
                                 <rect key="frame" x="0.0" y="40" width="414" height="66"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl7-ze-S2l">
-                                        <rect key="frame" x="186" y="21" width="42" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl7-ze-S2l">
+                                        <rect key="frame" x="168.5" y="21" width="77" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1081,8 +1081,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCp-Cr-pmD" userLabel="Header">
                                 <rect key="frame" x="0.0" y="40" width="414" height="66"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ua-CO-aMI">
-                                        <rect key="frame" x="186" y="21" width="42" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agenda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ua-CO-aMI">
+                                        <rect key="frame" x="170.5" y="21" width="73" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1101,7 +1101,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXy-Kj-98I">
-                                        <rect key="frame" x="342" y="16.5" width="52" height="33"/>
+                                        <rect key="frame" x="314" y="13" width="80" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BFE-Te-xcr"/>
+                                            <constraint firstAttribute="width" constant="80" id="PAc-HY-LfS"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Option">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1115,7 +1119,6 @@
                                 <constraints>
                                     <constraint firstItem="aXy-Kj-98I" firstAttribute="centerY" secondItem="ZCp-Cr-pmD" secondAttribute="centerY" id="8Xl-Uh-a5x"/>
                                     <constraint firstItem="9eS-uE-WsZ" firstAttribute="centerY" secondItem="ZCp-Cr-pmD" secondAttribute="centerY" id="8p9-TE-P06"/>
-                                    <constraint firstItem="aXy-Kj-98I" firstAttribute="leading" secondItem="1Ua-CO-aMI" secondAttribute="trailing" priority="999" constant="114" id="JFe-Un-SHT"/>
                                     <constraint firstAttribute="height" constant="66" id="PBT-G6-2DL"/>
                                     <constraint firstItem="1Ua-CO-aMI" firstAttribute="centerY" secondItem="ZCp-Cr-pmD" secondAttribute="centerY" id="T4m-7E-fZ2"/>
                                     <constraint firstItem="1Ua-CO-aMI" firstAttribute="centerX" secondItem="ZCp-Cr-pmD" secondAttribute="centerX" id="eEE-df-JPi"/>
@@ -2047,14 +2050,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AccommodationCell" id="MU0-Bn-kaS" userLabel="Accommodation Cell" customClass="AccommodationCell" customModule="ComputerNetworksConference" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="324" height="146"/>
+                                        <rect key="frame" x="0.0" y="28" width="324" height="195.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MU0-Bn-kaS" id="dh7-GS-m5T">
-                                            <rect key="frame" x="0.0" y="0.0" width="324" height="146"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="324" height="195.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wnr-fB-EXM">
-                                                    <rect key="frame" x="25" y="5" width="204" height="131"/>
+                                                    <rect key="frame" x="25" y="5" width="204" height="180.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVY-3i-S4m" userLabel="Name">
                                                             <rect key="frame" x="0.0" y="0.0" width="204" height="30.5"/>
@@ -2063,10 +2066,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlV-Xb-ltN" userLabel="Address Stack View">
-                                                            <rect key="frame" x="0.0" y="40.5" width="204" height="50.5"/>
+                                                            <rect key="frame" x="0.0" y="40.5" width="204" height="100"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location" translatesAutoresizingMaskIntoConstraints="NO" id="uSi-2h-rSt" userLabel="Address Icon">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="50.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="100"/>
                                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="f8N-gB-Oy3"/>
@@ -2074,7 +2077,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgA-45-WC1" userLabel="Address">
-                                                                    <rect key="frame" x="35" y="0.0" width="169" height="50.5"/>
+                                                                    <rect key="frame" x="35" y="0.0" width="169" height="100"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -2082,7 +2085,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zph-pb-sMn" userLabel="Number Stack View">
-                                                            <rect key="frame" x="0.0" y="101" width="204" height="30"/>
+                                                            <rect key="frame" x="0.0" y="150.5" width="204" height="30"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7SA-LT-aW2" userLabel="Address Icon">
                                                                     <rect key="frame" x="0.0" y="1.5" width="25" height="27.5"/>
@@ -2103,7 +2106,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-google-maps-old" translatesAutoresizingMaskIntoConstraints="NO" id="byz-eK-umt">
-                                                    <rect key="frame" x="239" y="40.5" width="65" height="65"/>
+                                                    <rect key="frame" x="239" y="65.5" width="65" height="65"/>
                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="byz-eK-umt" secondAttribute="height" multiplier="1:1" id="Ihq-zc-9zz"/>
@@ -2185,14 +2188,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImportantPlacesCell" id="5sr-br-pgm" customClass="ImportantPlacesCell" customModule="ComputerNetworksConference" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="324" height="146"/>
+                                        <rect key="frame" x="0.0" y="28" width="324" height="195.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5sr-br-pgm" id="06H-n2-t3I">
-                                            <rect key="frame" x="0.0" y="0.0" width="324" height="146"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="324" height="195.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pjm-FF-g7f">
-                                                    <rect key="frame" x="25" y="5" width="204" height="131"/>
+                                                    <rect key="frame" x="25" y="5" width="204" height="180.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pharmacy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOp-LJ-XUu" userLabel="Name">
                                                             <rect key="frame" x="0.0" y="0.0" width="204" height="30.5"/>
@@ -2201,10 +2204,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-T0-uFZ" userLabel="Address Stack View">
-                                                            <rect key="frame" x="0.0" y="40.5" width="204" height="50.5"/>
+                                                            <rect key="frame" x="0.0" y="40.5" width="204" height="100"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location" translatesAutoresizingMaskIntoConstraints="NO" id="RYa-ZH-0eg" userLabel="Address Icon">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="50.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="100"/>
                                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="25" id="M9T-82-yGF"/>
@@ -2212,7 +2215,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idf-Cl-YaQ" userLabel="Address">
-                                                                    <rect key="frame" x="35" y="0.0" width="169" height="50.5"/>
+                                                                    <rect key="frame" x="35" y="0.0" width="169" height="100"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -2220,7 +2223,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WOf-c0-GtI" userLabel="Number Stack View">
-                                                            <rect key="frame" x="0.0" y="101" width="204" height="30"/>
+                                                            <rect key="frame" x="0.0" y="150.5" width="204" height="30"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gew-zY-6Y3" userLabel="Number Icon">
                                                                     <rect key="frame" x="0.0" y="1.5" width="25" height="27.5"/>
@@ -2241,7 +2244,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-google-maps-old" translatesAutoresizingMaskIntoConstraints="NO" id="Pb9-PV-9NK">
-                                                    <rect key="frame" x="239" y="40.5" width="65" height="65"/>
+                                                    <rect key="frame" x="239" y="65.5" width="65" height="65"/>
                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="65" id="AXY-Z5-4g8"/>
@@ -2337,6 +2340,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dNC-Wn-P2u"/>
+        <segue reference="hXx-Xn-Tqc"/>
     </inferredMetricsTieBreakers>
 </document>

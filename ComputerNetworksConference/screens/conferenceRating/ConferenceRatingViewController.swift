@@ -57,7 +57,7 @@ class ConferenceRatingViewController: UIViewController, UIPickerViewDataSource, 
         
         let entity = ConferenceRatesEntity(conferenceRateDescription: nil, value: 0)
         
-        entity.value = StarPickerView.selectedRow(inComponent: 0)
+        entity.value = StarPickerView.selectedRow(inComponent: 0) + 1
         
         try! GlobalVariables.realm.write{
             GlobalVariables.realm.add(entity)
